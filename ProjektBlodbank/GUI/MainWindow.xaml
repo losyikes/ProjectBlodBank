@@ -4,46 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjektBlodbank"
+        xmlns:controls="clr-namespace:ProjektBlodbank.GUI"
         mc:Ignorable="d"
         ResizeMode="NoResize"
         Title="MainWindow" Height="600" Width="600">
-    <Window.Resources>
-        <Style x:Key="NavButton" TargetType="Button">
-            <Setter Property="Background" Value="Transparent" />
-            <Setter Property="Height" Value="83" />
-            <Setter Property="BorderBrush" Value="#5c707c" />
-            <Setter Property="BorderThickness" Value="1,0,1,1" />
-            <Setter Property="HorizontalContentAlignment" Value="Right" />
-            <Setter Property="VerticalContentAlignment" Value="Bottom" />
-            <Setter Property="Foreground" Value="#5c707c" />
-            <Setter Property="Padding" Value="0,0,5,5" />
-            <Setter Property="DockPanel.Dock" Value="Top" />
-        </Style>
-        <Style x:Key="LogoImage" TargetType="Image">
-            <Setter Property="VerticalAlignment" Value="Top"/>
-            <Setter Property="Margin" Value="0,10,0,0" />
-        </Style>
-        <Style x:Key="MainNavMenu" TargetType="Grid">
-            <Setter Property="Width" Value="150" />
-            <Setter Property="Height" Value="430" />
-            <Setter Property="VerticalAlignment" Value="Top" />
-            <Setter Property="HorizontalAlignment" Value="Left" />
-            <Setter Property="Margin" Value="0,148,0,0" />
-        </Style>
-        <Style x:Key="ImageBottomBorder" TargetType="Border">
-            <Setter Property="BorderThickness" Value="0,0,0,1" />
-            <Setter Property="BorderBrush" Value="#5c707c" />
-            <Setter Property="HorizontalAlignment" Value="Left" />
-            <Setter Property="VerticalAlignment" Value="Top" />
-        </Style>
-        <Style x:Key="MainNavMenuStackPanel" TargetType="StackPanel">
-            <Setter Property="Width" Value="150" />
-            <Setter Property="Height" Value="430" />
-            <Setter Property="VerticalAlignment" Value="Top" />
-            <Setter Property="HorizontalAlignment" Value="Left" />
-            <Setter Property="Margin" Value="0,148,0,0" />
-        </Style>
-    </Window.Resources>
+    
     <Grid>
          <Grid x:Name="LogoGrid">
             <Border Style="{StaticResource ImageBottomBorder}" >
@@ -52,14 +17,29 @@
         </Grid>
         <Grid x:Name="NavMenuGrid" Style="{StaticResource MainNavMenu}">
             <StackPanel>
-                <Button Style="{StaticResource NavButton}" Content="Start"/>
-                <Button Style="{StaticResource NavButton}" Content="Kalender"/>
-                <Button Style="{StaticResource NavButton}" Content="Statistik"/>
-                <Button Style="{StaticResource NavButton}" Content="Social"/>
-                <Button Style="{StaticResource NavButton}" Content="Indstillinger"/>
+                <Button Style="{StaticResource NavButton}" Content="Start" Name="StartButton" Click="StartButton_Click"/>
+                <Button Style="{StaticResource NavButton}" Content="Kalender" Name="CalenderButton" Click="CalenderButton_Click"/>
+                <Button Style="{StaticResource NavButton}" Content="Statistik" Name="StatisticButton" Click="StatisticButton_Click"/>
+                <Button Style="{StaticResource NavButton}" Content="Social" Name="SocialButton" Click="SocialButton_Click"/>
+                <Button Style="{StaticResource NavButton}" Content="Indstillinger" Name="SettingsButton" Click="SettingsButton_Click"/>
             </StackPanel>
         </Grid>
         <Grid x:Name="ContentGrid" Width="450" HorizontalAlignment="Left"  Height="450" VerticalAlignment="Top" Margin="150,138,0,0">
+            <Grid x:Name="StartContentGrid" Visibility="Visible">
+                <controls:StartContent />
+            </Grid>
+            <Grid x:Name="CalendarContentGrid" Visibility="Hidden">
+                <controls:CalendarContent />
+            </Grid>
+            <Grid x:Name="StatisticContentGrid" Visibility="Hidden">
+                <controls:StatisticContent />
+            </Grid>
+            <Grid x:Name="SocialContentGrid" Visibility="Hidden">
+                <controls:SocialContent />
+            </Grid>
+            <Grid x:Name="SettingsContentGrid" Visibility="Hidden">
+                <controls:SettingsContent />
+            </Grid>
         </Grid>
     </Grid>
 </Window>

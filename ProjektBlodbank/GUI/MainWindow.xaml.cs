@@ -20,9 +20,50 @@ namespace ProjektBlodbank
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<Grid> gridList = new List<Grid>();
         public MainWindow()
         {
             InitializeComponent();
+            gridList.Add(StartContentGrid);
+            gridList.Add(SocialContentGrid);
+            gridList.Add(StatisticContentGrid);
+            gridList.Add(SettingsContentGrid);
+            gridList.Add(CalendarContentGrid);
+        }
+
+        private void StartButton_Click(object sender, RoutedEventArgs e)
+        {
+            showGrid(StartContentGrid);
+        }
+
+        private void CalenderButton_Click(object sender, RoutedEventArgs e)
+        {
+            showGrid(CalendarContentGrid);
+        }
+
+        private void StatisticButton_Click(object sender, RoutedEventArgs e)
+        {
+            showGrid(StatisticContentGrid);
+        }
+
+        private void SocialButton_Click(object sender, RoutedEventArgs e)
+        {
+            showGrid(SocialContentGrid);
+        }
+
+        private void SettingsButton_Click(object sender, RoutedEventArgs e)
+        {
+            showGrid(SettingsContentGrid);
+        }
+        void showGrid(Grid chosenGrid)
+        {
+            foreach(Grid grid in gridList)
+            {
+                if (chosenGrid == grid)
+                    grid.Visibility = Visibility.Visible;
+                else
+                    grid.Visibility = Visibility.Hidden;
+            }
         }
     }
 }
