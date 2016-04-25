@@ -84,15 +84,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-<<<<<<< HEAD
+
     <Compile Include="GUI\CalendarContent.xaml.cs">
       <DependentUpon>CalendarContent.xaml</DependentUpon>
-=======
+</Compile>
     <Compile Include="DatabaseDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
->>>>>>> 3f5a8e8a66b837fc25db0dd966064267830fec47
     </Compile>
     <Compile Include="GUI\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
