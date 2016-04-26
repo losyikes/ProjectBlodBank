@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[CPR]
+(
+	[UserId] INT NOT NULL PRIMARY KEY, 
+    [CPRnumber] VARCHAR(50) NULL
+)
