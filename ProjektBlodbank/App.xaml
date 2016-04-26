@@ -40,9 +40,13 @@
             <Setter Property="Margin" Value="0,148,0,0" />
         </Style>
         <Style x:Key="ContentUserControl" TargetType="UserControl">
-            <Setter Property="Width" Value="425" />
-            <Setter Property="Height" Value="425" />
+            <Setter Property="Width" Value="440" />
+            <Setter Property="Height" Value="420" />
             <!--<Setter Property="Visibility" Value="Hidden" />-->
+        </Style>
+        <Style x:Key="ContentGrid" TargetType="Grid">
+            <Setter Property="Width" Value="440" />
+            <Setter Property="Height" Value="420" />
         </Style>
     </Application.Resources>
 </Application>

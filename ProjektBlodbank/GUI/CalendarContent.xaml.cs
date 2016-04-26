@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -20,9 +21,13 @@ namespace ProjektBlodbank.GUI
     /// </summary>
     public partial class CalendarContent : UserControl
     {
+        Calendar calendar = new Calendar(420, 430);
         public CalendarContent()
         {
             InitializeComponent();
+            calendar.Main = this;
+            Grid calendarGrid = calendar.createGrid();
+            CalendarContentGrid.Children.Add(calendarGrid);
         }
     }
 }

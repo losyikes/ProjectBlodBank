@@ -84,6 +84,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Controller\Calendar.cs" />
     <Compile Include="GUI\CalendarContent.xaml.cs">
       <DependentUpon>CalendarContent.xaml</DependentUpon>
     </Compile>
@@ -148,7 +149,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controller\" />
     <Folder Include="Data\" />
   </ItemGroup>
   <ItemGroup>

@@ -8,7 +8,7 @@
              d:DesignHeight="300" d:DesignWidth="300"
              Style="{StaticResource ContentUserControl}"
              >
-    <Grid>
-            <Label Content="Calendar Content" />
+    <Grid x:Name="CalendarContentGrid" Style="{StaticResource ContentGrid}">
+            
     </Grid>
 </UserControl>
