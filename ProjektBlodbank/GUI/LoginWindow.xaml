@@ -1,0 +1,23 @@
+﻿<Window x:Class="ProjektBlodbank.GUI.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjektBlodbank.GUI"
+        mc:Ignorable="d"
+        Title="Login" Height="220" Width="400">
+    <Grid>
+        <!--Layout/ UI må for min skyld gerne ændres, så det ser bedre ud, Daniel N-->
+        <StackPanel Margin="15">
+            <Label x:Name="UserNameLbl" Content="Brugernavn:"/>
+            <TextBox x:Name="UserNameTbx"/>
+            <Label x:Name="PasswordLbl" Content="Kodeord:"/>
+            <TextBox x:Name="PasswordTbx"/>
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,5,0,0">
+                <Button x:Name="LoginBtn" Content="Log ind" Margin="0,0,0,5" Click="LoginBtn_Click"/>
+                <Button x:Name="NewUserBtn" Content="Ny bruger" Margin="0,0,0,5" Click="NewUserBtn_Click"/>
+                <Button x:Name="ForgotPasswordBtn" Content="Glemt kodeord" Click="ForgotPasswordBtn_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
