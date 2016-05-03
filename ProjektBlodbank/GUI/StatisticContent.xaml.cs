@@ -18,11 +18,16 @@ namespace ProjektBlodbank.GUI
     /// <summary>
     /// Interaction logic for StatisticContent.xaml
     /// </summary>
+    
     public partial class StatisticContent : UserControl
     {
+        StatisticsChart chart = new StatisticsChart();
         public StatisticContent()
         {
             InitializeComponent();
+            chart.statContent = this;
+            Grid statGrid = chart.CreateGrid();
+            StatisticsContentGrid.Children.Add(statGrid);
         }
     }
 }

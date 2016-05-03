@@ -8,7 +8,7 @@
              d:DesignHeight="300" d:DesignWidth="300"
              Style="{StaticResource ContentUserControl}"
              >
-    <Grid>
-        <Label Content="Statistic Content"></Label> 
+    <Grid x:Name="StatisticsContentGrid">
+        
     </Grid>
 </UserControl>
