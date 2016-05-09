@@ -26,12 +26,16 @@ namespace ProjektBlodbank.GUI
 
         private void LoginBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            MainWindow mainWindow = new MainWindow();
+            mainWindow.Show();
+            this.Close();
         }
 
         private void NewUserBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            NewUserWindow newUserWindow = new NewUserWindow();
+            newUserWindow.Show();
+            this.Close();
         }
 
         private void ForgotPasswordBtn_Click(object sender, RoutedEventArgs e)
