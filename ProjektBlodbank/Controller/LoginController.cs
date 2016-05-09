@@ -10,12 +10,10 @@ namespace ProjektBlodbank
     {
         public bool ValidatePassword(string password1, string password2)
         {
-            bool matchingPasswords;
             if (password1 == password2)
-                matchingPasswords = true;
+                return true;
             else
-                matchingPasswords = false;
-            return matchingPasswords;
+                return false;
         }
     }
 }

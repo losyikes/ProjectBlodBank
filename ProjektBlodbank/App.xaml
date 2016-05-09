@@ -48,5 +48,20 @@
             <Setter Property="Width" Value="440" />
             <Setter Property="Height" Value="420" />
         </Style>
+        <Style x:Key="LoginStackPanel" TargetType="StackPanel">
+            <Setter Property="VerticalAlignment" Value="Top" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+        </Style>
+        <Style x:Key="LoginButton" TargetType="Button">
+            <Setter Property="Width" Value="100" />
+            <Setter Property="Height" Value="30" />
+            <Setter Property="Margin" Value="0,5,0,0" />
+            <Setter Property="BorderBrush" Value="#5c707c" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="Foreground" Value="#5c707c" />
+        </Style>
+        <Style x:Key="LoginLabel" TargetType="Label">
+            <Setter Property="Foreground" Value="#5c707c" />
+        </Style>
     </Application.Resources>
 </Application>

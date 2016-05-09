@@ -5,19 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjektBlodbank.GUI"
         mc:Ignorable="d"
-        Title="ProjektBlodbank - Login" Height="230" Width="400">
-    <Grid>
+        Title="ProjektBlodbank - Login" Height="270" Width="400">
+    <Grid >
+        <Grid x:Name="LoginGrid">
         <!--Layout/ UI må for min skyld gerne ændres, så det ser bedre ud, Daniel N-->
-        <StackPanel Margin="15">
-            <Label x:Name="UserNameLbl" Content="Brugernavn:"/>
-            <TextBox x:Name="UserNameTbx"/>
-            <Label x:Name="PasswordLbl" Content="Kodeord:"/>
-            <TextBox x:Name="PasswordTbx"/>
-            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,5,0,0">
-                <Button x:Name="LoginBtn" Content="Log ind" Margin="0,0,0,5" Click="LoginBtn_Click"/>
-                <Button x:Name="NewUserBtn" Content="Ny bruger" Margin="0,0,0,5" Click="NewUserBtn_Click"/>
-                <Button x:Name="ForgotPasswordBtn" Content="Glemt kodeord" Click="ForgotPasswordBtn_Click"/>
+            <StackPanel Margin="15">
+                <Label Style="{StaticResource LoginLabel}" x:Name="UserNameLbl" Content="Brugernavn:"/>
+                <TextBox x:Name="LoginUserNameTbx"/>
+                <Label Style="{StaticResource LoginLabel}" x:Name="PasswordLbl" Content="Kodeord:"/>
+                <TextBox x:Name="LoginPasswordTbx"/>
+                <StackPanel Style="{StaticResource LoginStackPanel}">
+                    <Button x:Name="LoginBtn" Style="{StaticResource LoginButton}" Content="Log ind" Click="LoginBtn_Click"/>
+                    <Button x:Name="NewUserBtn" Style="{StaticResource LoginButton}" Content="Ny bruger"  Click="NewUserBtn_Click" />
+                        <Button x:Name="ForgotPasswordBtn" Style="{StaticResource LoginButton}" Content="Glemt kodeord" Click="ForgotPasswordBtn_Click"/>
+                </StackPanel>
             </StackPanel>
-        </StackPanel>
+        </Grid>
+        <Grid x:Name="CreateUserGrid" Visibility="Hidden">
+            <StackPanel>
+                <Label Style="{StaticResource LoginLabel}" x:Name="CreateUserUserNameLbl" Content="Brugernavn:"/>
+                <TextBox x:Name="CreateUserUserNameTbx"/>
+                <Label Style="{StaticResource LoginLabel}" x:Name="CreateUserPasswordLbl" Content="Kodeord:"/>
+                <TextBox x:Name="CreateUserPasswordTbx"/>
+                <Label Style="{StaticResource LoginLabel}" x:Name="CreateUserRepeatPasswordLbl" Content="Gentag kodeord:"/>
+                <TextBox x:Name="CreateUserRepeatPasswordTbx"/>
+                <Label Style="{StaticResource LoginLabel}" x:Name="CreateUserEmailLbl" Content="E-mail:"/>
+                <TextBox x:Name="CreateUserEmailTbx"/>
+                <Button  Style="{StaticResource LoginButton}" x:Name="CreateUserBtn" Content="Opret bruger"  Click="CreateUserBtn_Click"/>
+            </StackPanel>
+        </Grid>
     </Grid>
+        
+    
+
 </Window>

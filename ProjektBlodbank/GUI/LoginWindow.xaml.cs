@@ -33,14 +33,28 @@ namespace ProjektBlodbank.GUI
 
         private void NewUserBtn_Click(object sender, RoutedEventArgs e)
         {
-            NewUserWindow newUserWindow = new NewUserWindow();
-            newUserWindow.Show();
-            this.Close();
+            
+            CreateUserGrid.Visibility = Visibility.Visible;
+            LoginGrid.Visibility = Visibility.Hidden;
+            
         }
 
         private void ForgotPasswordBtn_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void CreateUserBtn_Click(object sender, RoutedEventArgs e)
+        {
+            LoginController loginController = new LoginController();
+            bool passwordValidated;
+            passwordValidated = loginController.ValidatePassword(CreateUserPasswordTbx.Text, CreateUserRepeatPasswordTbx.Text);
+            if (passwordValidated == true)
+            {
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.Show();
+                this.Close();
+            }
         }
     }
 }
