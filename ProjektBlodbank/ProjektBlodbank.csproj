@@ -104,7 +104,7 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="GUI\SettingsContent.xaml">
+    <Page Include="GUI\RulesContent.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -122,8 +122,8 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GUI\SettingsContent.xaml.cs">
-      <DependentUpon>SettingsContent.xaml</DependentUpon>
+    <Compile Include="GUI\RulesContent.xaml.cs">
+      <DependentUpon>RulesContent.xaml</DependentUpon>
     </Compile>
     <Compile Include="GUI\SocialContent.xaml.cs">
       <DependentUpon>SocialContent.xaml</DependentUpon>

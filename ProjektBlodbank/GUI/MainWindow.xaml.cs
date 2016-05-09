@@ -27,7 +27,7 @@ namespace ProjektBlodbank
             gridList.Add(StartContentGrid);
             gridList.Add(SocialContentGrid);
             gridList.Add(StatisticContentGrid);
-            gridList.Add(SettingsContentGrid);
+            gridList.Add(RulesContentGrid);
             gridList.Add(CalendarContentGrid);
         }
 
@@ -53,7 +53,7 @@ namespace ProjektBlodbank
 
         private void SettingsButton_Click(object sender, RoutedEventArgs e)
         {
-            showGrid(SettingsContentGrid);
+            showGrid(RulesContentGrid);
         }
         void showGrid(Grid chosenGrid)
         {

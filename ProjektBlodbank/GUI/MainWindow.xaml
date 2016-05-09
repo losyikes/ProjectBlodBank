@@ -21,7 +21,7 @@
                 <Button Style="{StaticResource NavButton}" Content="Kalender" Name="CalenderButton" Click="CalenderButton_Click"/>
                 <Button Style="{StaticResource NavButton}" Content="Statistik" Name="StatisticButton" Click="StatisticButton_Click"/>
                 <Button Style="{StaticResource NavButton}" Content="Social" Name="SocialButton" Click="SocialButton_Click"/>
-                <Button Style="{StaticResource NavButton}" Content="Indstillinger" Name="SettingsButton" Click="SettingsButton_Click"/>
+                <Button Style="{StaticResource NavButton}" Content="Regler/Vilkår" Name="SettingsButton" Click="SettingsButton_Click"/>
             </StackPanel>
         </Grid>
         <Grid x:Name="ContentGrid" Width="450" HorizontalAlignment="Left"  Height="450" VerticalAlignment="Top" Margin="150,138,0,0">
@@ -37,8 +37,8 @@
             <Grid x:Name="SocialContentGrid" Visibility="Hidden">
                 <controls:SocialContent />
             </Grid>
-            <Grid x:Name="SettingsContentGrid" Visibility="Hidden">
-                <controls:SettingsContent />
+            <Grid x:Name="RulesContentGrid" Visibility="Hidden">
+                <controls:RulesContent />
             </Grid>
         </Grid>
     </Grid>

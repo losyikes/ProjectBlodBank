@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace ProjektBlodbank.GUI
 {
     /// <summary>
-    /// Interaction logic for SettingsContent.xaml
+    /// Interaction logic for RulesContent.xaml
     /// </summary>
-    public partial class SettingsContent : UserControl
+    public partial class RulesContent : UserControl
     {
-        public SettingsContent()
+        public RulesContent()
         {
             InitializeComponent();
         }
