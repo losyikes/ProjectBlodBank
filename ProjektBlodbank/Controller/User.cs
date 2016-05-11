@@ -28,7 +28,7 @@ namespace ProjektBlodbank.Controller
         EntitySet<Donation> donationList = new EntitySet<Donation>();
         string preferredBusLocation;
         [Column(IsPrimaryKey = true, Storage = "userId")]
-        public int UserID {
+        public int UserId {
             get { return this.userId; }
         }
         [Column(Storage = "firstname")]

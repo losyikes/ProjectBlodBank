@@ -4,46 +4,49 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Linq;
+using System.Data.Linq.Mapping;
+using ProjektBlodbank.Controller;
 
 namespace ProjektBlodbank.Data
 {
     class UserData
     {
-        private DataContext db;
+        private BloodbankData db;
 
         public UserData()
         {
-            db = new DataContext("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Database.mdf;Integrated Security=True");
+            //db = new DataContext("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Database.mdf;Integrated Security=True");
+            db = new BloodbankData();
         }
 
         public User GetUser(int userID)
         {
-            var user = from x in db.GetTable<User>()
-                     where x.userID == userID
+            var user = from x in db.User
+                     where x.UserId == userID
                      select x;
-            return user;
+            return (User)user;
         }
 
         public void AddUser(User user)
         {
-                //db.User.InsertOnSubmit(user); I'm not sure if this is correct
-                db.User.Add(user); // or if this is
+                db.User.InsertOnSubmit(user); //I'm not sure if this is correct
+                //db.User.Add(user); // or if this is
                 db.SubmitChanges();
         }
 
         public string GetFirstName(int userID)
         {
 
-            User user = GetUser();
-            return user.FirstName;
+            User user = GetUser(userID);
+            return user.Firstname;
         }
         
         public Totals GetTotals(int userID)
         {
             var totals = from x in db.GetTable<Totals>()
-                       where x.userID == userID
+                       where x.UserId == userID
                        select x;
-            return totals;
+            return (Totals)totals;
         }
     }
 }
