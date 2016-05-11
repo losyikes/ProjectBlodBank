@@ -23,7 +23,8 @@ namespace ProjektBlodbank.Controller
         string bloodtype;
         string email;
         string phoneNumber;
-        DateTime nextDonation;
+        DateTime nextPlasmaDonation;
+        DateTime nextWholeBloodDonation;
         EntitySet<Donation> donationList = new EntitySet<Donation>();
         string preferredBusLocation;
         [Column(IsPrimaryKey = true, Storage = "userId")]
@@ -85,10 +86,16 @@ namespace ProjektBlodbank.Controller
             get { return this.phoneNumber; }
             set { this.phoneNumber = value; }
         }
-        [Column(Storage ="nextDonation")]
+        [Column(Storage ="nextPlasmaDonation")]
         public DateTime NextDonation {
-            get { return this.nextDonation; }
-            set { this.nextDonation = value; }
+            get { return this.nextPlasmaDonation; }
+            set { this.nextPlasmaDonation = value; }
+        }
+        [Column(Storage ="nextWholeBloodDonation")]
+        public DateTime NextWholeBloodDonation
+        {
+            get { return this.nextWholeBloodDonation; }
+            set { this.nextWholeBloodDonation = value; }
         }
         [Association(Storage ="donationList", OtherKey ="UserId")]
         public EntitySet<Donation> DonationList

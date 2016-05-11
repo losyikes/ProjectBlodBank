@@ -15,6 +15,7 @@ namespace ProjektBlodbank.Controller
         int userId;
         double amount;
         string bloodbagNumber;
+        string donationType;
         int bloodsugar;
         string donationLocation;
         DateTime donationDate;
