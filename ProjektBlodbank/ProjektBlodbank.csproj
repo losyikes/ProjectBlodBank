@@ -93,8 +93,11 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Controller\Calendar.cs" />
+    <Compile Include="Controller\Donation.cs" />
     <Compile Include="Controller\StatisticsChart.cs" />
     <Compile Include="Controller\LoginController.cs" />
+    <Compile Include="Controller\Totals.cs" />
+    <Compile Include="Controller\User.cs" />
     <Compile Include="DataClasses1.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
