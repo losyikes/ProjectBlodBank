@@ -16,9 +16,6 @@ namespace ProjektBlodbank.Data
             db = new DataContext("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Database.mdf;Integrated Security=True");
         }
 
-        /*
-        Uncomment when User class is added
-
         public User GetUser(int userID)
         {
             var user = from x in db.GetTable<User>()
@@ -26,6 +23,27 @@ namespace ProjektBlodbank.Data
                      select x;
             return user;
         }
-        */
+
+        public void AddUser(User user)
+        {
+                //db.User.InsertOnSubmit(user); I'm not sure if this is correct
+                db.User.Add(user); // or if this is
+                db.SubmitChanges();
+        }
+
+        public string GetFirstName(int userID)
+        {
+
+            User user = GetUser();
+            return user.FirstName;
+        }
+        
+        public Totals GetTotals(int userID)
+        {
+            var totals = from x in db.GetTable<Totals>()
+                       where x.userID == userID
+                       select x;
+            return totals;
+        }
     }
 }
