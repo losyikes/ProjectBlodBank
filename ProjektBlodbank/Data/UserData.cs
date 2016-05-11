@@ -26,7 +26,8 @@ namespace ProjektBlodbank.Data
 
         public void AddUser(User user)
         {
-                db.User.InsertOnSubmit(user);
+                //db.User.InsertOnSubmit(user); I'm not sure if this is correct
+                db.User.Add(user); // or if this is
                 db.SubmitChanges();
         }
 
