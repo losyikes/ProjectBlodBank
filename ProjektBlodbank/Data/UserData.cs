@@ -19,18 +19,30 @@ namespace ProjektBlodbank.Data
             db = new BloodbankData();
         }
 
+        public void AddUser(User user)
+        {
+            db.User.InsertOnSubmit(user);
+            db.SubmitChanges();
+        }
+
+        public void AddDonation(Donation donation)
+        {
+            db.Donation.InsertOnSubmit(donation);
+            db.SubmitChanges();
+        }
+
+        public void AddTotals(Totals totals)
+        {
+            db.Totals.InsertOnSubmit(totals);
+            db.SubmitChanges();
+        }
+
         public User GetUser(int userID)
         {
             var user = from x in db.User
-                     where x.UserId == userID
-                     select x;
+                       where x.UserId == userID
+                       select x;
             return (User)user;
-        }
-
-        public void AddUser(User user)
-        {
-                db.User.InsertOnSubmit(user);
-                db.SubmitChanges();
         }
 
         public string GetFirstName(int userID)
@@ -38,13 +50,22 @@ namespace ProjektBlodbank.Data
             User user = GetUser(userID);
             return user.Firstname;
         }
-        
+
+        public Donation GetDonation(int userID)
+        {
+            var donation = from x in db.Donation
+                           where x.UserId == userID
+                           select x;
+            return (Donation)donation;
+        }
+
         public Totals GetTotals(int userID)
         {
             var totals = from x in db.Totals
-                       where x.UserId == userID
-                       select x;
+                         where x.UserId == userID
+                         select x;
             return (Totals)totals;
         }
+
     }
 }
