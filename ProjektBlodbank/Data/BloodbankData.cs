@@ -5,7 +5,7 @@ using System.Data.Linq;
 using System.Data.Linq.Mapping;
 using System.Text;
 using System.Threading.Tasks;
-using ProjektBlodbank.Controller;
+using ProjektBlodbank.Business;
 
 namespace ProjektBlodbank.Data
 {

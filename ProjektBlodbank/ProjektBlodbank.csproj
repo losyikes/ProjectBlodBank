@@ -92,12 +92,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controller\Calendar.cs" />
-    <Compile Include="Controller\Donation.cs" />
-    <Compile Include="Controller\StatisticsChart.cs" />
-    <Compile Include="Controller\LoginController.cs" />
-    <Compile Include="Controller\Totals.cs" />
-    <Compile Include="Controller\User.cs" />
+    <Compile Include="Business\Calendar.cs" />
+    <Compile Include="Business\Donation.cs" />
+    <Compile Include="Business\StatisticsChart.cs" />
+    <Compile Include="Business\LoginController.cs" />
+    <Compile Include="Business\Totals.cs" />
+    <Compile Include="Business\User.cs" />
     <Compile Include="Data\BloodbankData.cs" />
     <Compile Include="Data\UserData.cs" />
     <Compile Include="GUI\CalendarContent.xaml.cs">
