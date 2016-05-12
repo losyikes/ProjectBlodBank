@@ -44,6 +44,12 @@ namespace ProjektBlodbank.Controller
             get { return this.bloodbagNumber; }
             set { this.bloodbagNumber = value; }
         }
+        [Column(Storage ="donationType")]
+        public string DonationType
+        {
+            get { return this.donationType; }
+            set { this.donationType = value; }
+        }
         [Column(Storage = "bloodsugar")]
         public int Bloodsugar
         {
