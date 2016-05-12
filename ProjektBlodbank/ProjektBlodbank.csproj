@@ -98,11 +98,15 @@
     <Compile Include="Controller\LoginController.cs" />
     <Compile Include="Controller\Totals.cs" />
     <Compile Include="Controller\User.cs" />
+    <Compile Include="DataClasses1.cs">
+      <DependentUpon>DataClasses1.dbml</DependentUpon>
+    </Compile>
     <Compile Include="DataClasses1.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses1.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Data\BloodbankData.cs" />
     <Compile Include="Data\UserData.cs" />
     <Compile Include="GUI\CalendarContent.xaml.cs">
       <DependentUpon>CalendarContent.xaml</DependentUpon>
