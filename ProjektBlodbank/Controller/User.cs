@@ -25,8 +25,9 @@ namespace ProjektBlodbank.Controller
         string phoneNumber;
         DateTime nextPlasmaDonation;
         DateTime nextWholeBloodDonation;
-        EntitySet<Donation> donationList = new EntitySet<Donation>();
+        EntitySet<Donation> donationList;
         string preferredBusLocation;
+        EntityRef<Totals> totals;
         [Column(IsPrimaryKey = true, Storage = "userId")]
         public int UserId {
             get { return this.userId; }
@@ -108,6 +109,12 @@ namespace ProjektBlodbank.Controller
         {
             get { return this.preferredBusLocation; }
             set { this.preferredBusLocation = value; }
+        }
+        [Association(Storage ="totals", ThisKey ="UserId")]
+        public Totals Totals
+        {
+            get { return this.totals.Entity; }
+            set { this.totals.Entity = value; }
         }
     }
 }

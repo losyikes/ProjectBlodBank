@@ -43,7 +43,7 @@ namespace ProjektBlodbank.Data
         
         public Totals GetTotals(int userID)
         {
-            var totals = from x in db.GetTable<Totals>()
+            var totals = from x in db.Totals
                        where x.UserId == userID
                        select x;
             return (Totals)totals;
