@@ -8,5 +8,6 @@
              d:DesignHeight="300" d:DesignWidth="300">
     <Grid>
             <Label Content="Rules Content" />
+        <Button Name="FillDbButton" Width="100" Height="25" Content="Fill Database" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,30,0,0" Click="FillDbButton_Click" ></Button>
     </Grid>
 </UserControl>

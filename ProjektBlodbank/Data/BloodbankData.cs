@@ -11,7 +11,7 @@ namespace ProjektBlodbank.Data
 {
     class BloodbankData : DataContext
     {
-        public BloodbankData() : base("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Database.mdf;Integrated Security=True")
+        public BloodbankData() : base("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Database1.mdf;Integrated Security=True")
         {
             
         }

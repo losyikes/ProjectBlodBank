@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Linq;
 using System.Data.Linq.Mapping;
+using System.IO;
 using ProjektBlodbank.Business;
 
 namespace ProjektBlodbank.Data
@@ -17,8 +18,9 @@ namespace ProjektBlodbank.Data
         {
             //db = new DataContext("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Database.mdf;Integrated Security=True");
             db = new BloodbankData();
+            
         }
-
+        
         public void AddUser(User user)
         {
             db.User.InsertOnSubmit(user);
@@ -67,5 +69,22 @@ namespace ProjektBlodbank.Data
             return (Totals)totals;
         }
 
+    }
+    public class DebugTextWriter : TextWriter
+    {
+        public override void Write(char[] buffer, int index, int count)
+        {
+            System.Diagnostics.Debug.Write(new string(buffer, index, count));
+        }
+
+        public override void Write(string value)
+        {
+            System.Diagnostics.Debug.Write("txt: " + value);
+        }
+
+        public override Encoding Encoding
+        {
+            get { return System.Text.Encoding.Default; }
+        }
     }
 }

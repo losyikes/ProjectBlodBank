@@ -8,71 +8,27 @@ using System.Threading.Tasks;
 
 namespace ProjektBlodbank.Business
 {
-    [Table(Name ="Donation")]
+    [Table]
     class Donation
     {
-        int id;
-        int userId;
-        double amount;
-        string bloodbagNumber;
-        string donationType;
-        int bloodsugar;
-        string donationLocation;
-        DateTime donationDate;
-        TimeSpan duration;
-        
-        [Column(IsPrimaryKey = true, Storage="id")]
-        public int Id
-        {
-            get { return id; }
-        }
-        [Column(Storage ="userId")]
-        public int UserId
-        {
-            get { return this.userId; }
-            set { this.userId = value; }
-        }
-        [Column(Storage ="amount")]
-        public double Amount
-        {
-            get { return this.amount; }
-            set { this.amount = value; }
-        }
-        [Column(Storage = "bloodbagNumber")]
-        public string BloodbagNumber
-        {
-            get { return this.bloodbagNumber; }
-            set { this.bloodbagNumber = value; }
-        }
-        [Column(Storage ="donationType")]
-        public string DonationType
-        {
-            get { return this.donationType; }
-            set { this.donationType = value; }
-        }
-        [Column(Storage = "bloodsugar")]
-        public int Bloodsugar
-        {
-            get { return this.bloodsugar; }
-            set { this.bloodsugar = value; }
-        }
-        [Column(Storage = "donationLocation")]
-        public string DonationLocation
-        {
-            get { return this.donationLocation; }
-            set { this.donationLocation = value; }
-        }
-        [Column(Storage = "donationDate")]
-        public DateTime DonationDate
-        {
-            get { return this.donationDate; }
-            set { this.donationDate = value; }
-        }
-        [Column(Storage = "duration")]
-        public TimeSpan Duration
-        {
-            get { return this.duration; }
-            set { this.duration = value; }
-        }
+        [Column(IsPrimaryKey = true, IsDbGenerated = true)]
+        public int Id { get; set; }
+        [Column]
+        public int UserId { get; set; }
+        [Column]
+        public double Amount { get; set; }
+        [Column]
+        public string BloodbagNumber { get; set; }
+        [Column]
+        public string DonationType { get; set; }
+        [Column]
+        public double Bloodsugar { get; set; }
+        [Column]
+        public string DonationLocation { get; set; }
+        [Column]
+        public DateTime DonationDate { get; set; }
+        [Column(DbType = "Time NOT NULL")]
+        public TimeSpan Duration { get; set; }
+
     }
 }

@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using ProjektBlodbank.Business;
+using ProjektBlodbank.Data;
 
 namespace ProjektBlodbank.GUI
 {
@@ -22,10 +24,12 @@ namespace ProjektBlodbank.GUI
         public LoginWindow()
         {
             InitializeComponent();
+            
         }
 
         private void LoginBtn_Click(object sender, RoutedEventArgs e)
         {
+            UserData userdata = new UserData();
             MainWindow mainWindow = new MainWindow();
             mainWindow.Show();
             this.Close();

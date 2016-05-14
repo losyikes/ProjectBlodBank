@@ -8,43 +8,21 @@ using System.Threading.Tasks;
 
 namespace ProjektBlodbank.Business
 {
-    [Table(Name = "Totals")]
+    [Table]
     class Totals
     {
-        int userId;
-        double totalBlood;
-        TimeSpan totalDuration;
-        int totalDonations;
-        int savedLives;
-        [Column(Storage ="userId")]
-        public int UserId
-        {
-            get { return this.userId; }
-            set { this.userId = value; }
-        }
-        [Column(Storage ="totalBlood")]
-        public double TotalBlood
-        {
-            get { return this.totalBlood; }
-            set { this.totalBlood = value; }
-        }
-        [Column(Storage ="totalDuration")]
-        public TimeSpan TotalDuration
-        {
-            get { return this.totalDuration; }
-            set { this.totalDuration = value; }
-        }
-        [Column(Storage ="totalDonations")]
-        public int TotalDonations
-        {
-            get { return this.totalDonations; }
-            set { this.totalDonations = value; }
-        }
-        [Column(Storage ="savedLives")]
-        public int SavedLives
-        {
-            get { return this.savedLives; }
-            set { this.savedLives = value; }
-        }
+        
+        [Column(IsPrimaryKey = true, IsDbGenerated = true)]
+        public int Id { get; set; }
+        [Column]
+        public int UserId{ get; set; }
+        [Column]
+        public double TotalBlood{ get; set; }
+        [Column(DbType = "Time NOT NULL")]
+        public TimeSpan TotalDuration { get; set; }
+        [Column]
+        public int TotalDonations { get; set; }
+        [Column]
+        public int SavedLives { get; set; }
     }
 }
