@@ -39,17 +39,17 @@ namespace ProjektBlodbank.GUI
         {
 
             User user = new User();
-            user.Firstname = "Anders";
+            user.Firstname = "Andersine";
             user.Lastname = "And";
-            user.Streetname = "Paradisæblevej 113";
+            user.Streetname = "Gåsestræde 113";
             user.City = "Andeby";
             user.ZipCode = 5700;
             user.CPRNumber = 1245781245;
-            user.Login = "anders";
+            user.Login = "andersine";
             user.Password = "and";
             user.Bloodtype = "0+";
-            user.Email = "andersand@andeby.dk";
-            user.PhoneNumber = "12345678";
+            user.Email = "andersineand@andeby.dk";
+            user.PhoneNumber = "12345876";
             user.NextPlasmaDonation = DateTime.Now.AddDays(30);
             user.NextWholeBloodDonation = DateTime.Now.AddDays(14);
             user.PreferredBusLocation = "Fåborg";
@@ -62,7 +62,7 @@ namespace ProjektBlodbank.GUI
             donation.BloodbagNumber = "123";
             donation.Bloodsugar = 5.2;
             donation.DonationLocation = "Odense Sygehus Blodbank";
-            donation.DonationDate = DateTime.Now.AddDays(-60);
+            donation.DonationDate = DateTime.Now.AddDays(-90);
             donation.Duration = new TimeSpan(0, 31, 0);
             donation.DonationType = "WholeBlood";
             donation.UserId = user.UserId;
@@ -72,10 +72,20 @@ namespace ProjektBlodbank.GUI
             donation2.BloodbagNumber = "222";
             donation2.Bloodsugar = 4.2;
             donation2.DonationLocation = "Odense Sygehus Blodbank";
-            donation2.DonationDate = DateTime.Now.AddDays(-30);
+            donation2.DonationDate = DateTime.Now.AddDays(-60);
             donation2.DonationType = "WholeBlood";
             donation2.Duration = new TimeSpan(0, 39, 0);
             donation2.UserId = user.UserId;
+
+            Donation donation5 = new Donation();
+            donation5.Amount = 450;
+            donation5.BloodbagNumber = "222";
+            donation5.Bloodsugar = 4.2;
+            donation5.DonationLocation = "Odense Sygehus Blodbank";
+            donation5.DonationDate = DateTime.Now.AddDays(-30);
+            donation5.DonationType = "WholeBlood";
+            donation5.Duration = new TimeSpan(0, 39, 0);
+            donation5.UserId = user.UserId;
 
             Donation donation3 = new Donation();
             donation3.Amount = 450;
@@ -96,10 +106,23 @@ namespace ProjektBlodbank.GUI
             donation4.DonationType = "WholeBlood";
             donation4.Duration = new TimeSpan(0, 41, 0);
             donation4.UserId = user.UserId;
+
+            Donation donation6 = new Donation();
+            donation6.Amount = 450;
+            donation6.BloodbagNumber = "222";
+            donation6.Bloodsugar = 4.2;
+            donation6.DonationLocation = "Odense Sygehus Blodbank";
+            donation6.DonationDate = DateTime.Now.AddDays(-14);
+            donation6.DonationType = "Plasma";
+            donation6.Duration = new TimeSpan(0, 39, 0);
+            donation6.UserId = user.UserId;
+
             donationList.Add(donation);
             donationList.Add(donation2);
             donationList.Add(donation3);
             donationList.Add(donation4);
+            donationList.Add(donation5);
+            donationList.Add(donation6);
 
             Totals totals = new Totals();
             totals.UserId = user.UserId;
