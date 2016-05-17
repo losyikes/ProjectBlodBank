@@ -24,11 +24,11 @@ namespace ProjektBlodbank.GUI
     public partial class RulesContent : UserControl
     {
         //temp
-        private BloodbankData db;
+        private BloodbankDataContext db;
         public RulesContent()
         {
             InitializeComponent();
-            db = new BloodbankData();
+            db = new BloodbankDataContext();
         }
 
         private void FillDbButton_Click(object sender, RoutedEventArgs e)

@@ -103,7 +103,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataClasses1.dbml</DependentUpon>
     </Compile>
-    <Compile Include="Data\BloodbankData.cs" />
+    <Compile Include="Data\BloodbankDataContext.cs" />
     <Compile Include="Data\UserData.cs" />
     <Compile Include="GUI\CalendarContent.xaml.cs">
       <DependentUpon>CalendarContent.xaml</DependentUpon>

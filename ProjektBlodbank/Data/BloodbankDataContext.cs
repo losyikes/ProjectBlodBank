@@ -9,9 +9,9 @@ using ProjektBlodbank.Business;
 
 namespace ProjektBlodbank.Data
 {
-    class BloodbankData : DataContext
+    class BloodbankDataContext : DataContext
     {
-        public BloodbankData() : base("Data Source=ealdb1.eal.local;Initial Catalog=EJL21_DB;Persist Security Info=True;User ID=ejl21_usr;Password=Baz1nga21")
+        public BloodbankDataContext() : base("Data Source=ealdb1.eal.local;Initial Catalog=EJL21_DB;Persist Security Info=True;User ID=ejl21_usr;Password=Baz1nga21")
         {
             
         }
