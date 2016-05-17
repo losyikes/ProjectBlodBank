@@ -29,10 +29,24 @@ namespace ProjektBlodbank.GUI
 
         private void LoginBtn_Click(object sender, RoutedEventArgs e)
         {
-            UserData userdata = new UserData();
-            MainWindow mainWindow = new MainWindow();
-            mainWindow.Show();
-            this.Close();
+            /*
+            LoginController loginController = new LoginController();
+            if (LoginUserNameTbx.Text == "" && LoginPasswordTbx.Text == "")
+                MessageBox.Show("Indtast venlist et brugernavn og en adgangskode.");
+            else if (LoginUserNameTbx.Text == "")
+                MessageBox.Show("Indtast venlist et brugernavn.");
+            else if (LoginPasswordTbx.Text == "")
+                MessageBox.Show("Indtast venlist en adgangskode.");
+            else if (loginController.Login(LoginUserNameTbx.Text, LoginPasswordTbx.Text) == false)
+                MessageBox.Show("Indtast venlist gyldigt brugernavn og adgangskode.");
+            else
+            {
+            */
+                UserData userdata = new UserData();
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.Show();
+                this.Close();
+            //}
         }
 
         private void NewUserBtn_Click(object sender, RoutedEventArgs e)
