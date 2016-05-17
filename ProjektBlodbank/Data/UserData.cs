@@ -12,15 +12,24 @@ namespace ProjektBlodbank.Data
 {
     class UserData
     {
-        private BloodbankData db;
+        private BloodbankDataContext db;
 
+        public static User LoggedInUser { get; set; }
         public UserData()
         {
             //db = new DataContext("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Database.mdf;Integrated Security=True");
-            db = new BloodbankData();
+            db = new BloodbankDataContext();
             
         }
-        
+        public DateTime GetLastDonationDate(string type, User user)
+        {
+           DateTime date = Convert.ToDateTime(from x in db.Donation
+                       where x.UserId == user.UserId
+                       group x by x.DonationDate into grp
+                       select grp.OrderByDescending(g => g.DonationDate).FirstOrDefault().DonationDate);
+            
+            return date;
+        }
         public void AddUser(User user)
         {
             db.User.InsertOnSubmit(user);
@@ -70,21 +79,5 @@ namespace ProjektBlodbank.Data
         }
 
     }
-    public class DebugTextWriter : TextWriter
-    {
-        public override void Write(char[] buffer, int index, int count)
-        {
-            System.Diagnostics.Debug.Write(new string(buffer, index, count));
-        }
-
-        public override void Write(string value)
-        {
-            System.Diagnostics.Debug.Write("txt: " + value);
-        }
-
-        public override Encoding Encoding
-        {
-            get { return System.Text.Encoding.Default; }
-        }
-    }
+    
 }
