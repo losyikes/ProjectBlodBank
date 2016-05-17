@@ -21,10 +21,11 @@ namespace ProjektBlodbank.GUI
     /// </summary>
     public partial class LoginWindow : Window
     {
+        private int LoginGridHeight = 270;
+        private int CreateUserGridHeight = 535;
         public LoginWindow()
         {
             InitializeComponent();
-            
         }
 
         private void LoginBtn_Click(object sender, RoutedEventArgs e)
@@ -51,7 +52,7 @@ namespace ProjektBlodbank.GUI
 
         private void NewUserBtn_Click(object sender, RoutedEventArgs e)
         {
-            
+            this.Height = CreateUserGridHeight;
             CreateUserGrid.Visibility = Visibility.Visible;
             LoginGrid.Visibility = Visibility.Hidden;
             
@@ -73,6 +74,13 @@ namespace ProjektBlodbank.GUI
                 mainWindow.Show();
                 this.Close();
             }
+        }
+
+        private void BackBtn_Click(object sender, RoutedEventArgs e)
+        {
+            this.Height = LoginGridHeight;
+            CreateUserGrid.Visibility = Visibility.Hidden;
+            LoginGrid.Visibility = Visibility.Visible;
         }
     }
 }
