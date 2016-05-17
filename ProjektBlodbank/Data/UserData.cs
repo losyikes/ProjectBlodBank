@@ -56,6 +56,14 @@ namespace ProjektBlodbank.Data
             return (User)user;
         }
 
+        public User GetUser(string username)
+        {
+            var user = from x in db.User
+                       where x.Login == username
+                       select x;
+            return (User)user;
+        }
+
         public string GetFirstName(int userID)
         {
             User user = GetUser(userID);
