@@ -11,7 +11,7 @@ namespace ProjektBlodbank.Data
 {
     class BloodbankData : DataContext
     {
-        public BloodbankData() : base("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Database1.mdf;Integrated Security=True")
+        public BloodbankData() : base("Data Source=ealdb1.eal.local;Initial Catalog=EJL21_DB;Persist Security Info=True;User ID=ejl21_usr;Password=Baz1nga21")
         {
             
         }
