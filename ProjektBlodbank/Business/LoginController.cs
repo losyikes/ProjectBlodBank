@@ -15,5 +15,10 @@ namespace ProjektBlodbank
             else
                 return false;
         }
+
+        internal bool Login(string inputUsername, string inputPassword)
+        {
+            return true;
+        }
     }
 }
