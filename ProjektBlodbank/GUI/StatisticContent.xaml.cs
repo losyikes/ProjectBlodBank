@@ -21,11 +21,15 @@ namespace ProjektBlodbank.GUI
     
     public partial class StatisticContent : UserControl
     {
-        StatisticsChart chart = new StatisticsChart();
+        Controller chart = new Controller();
         public StatisticContent()
         {
             InitializeComponent();
-            chart.statContent = this;
+            
+            
+            
+            
+            //chart.statContent = this;
 
 
 

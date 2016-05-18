@@ -20,9 +20,25 @@ namespace ProjektBlodbank.GUI
     /// </summary>
     public partial class StartContent : UserControl
     {
+        Controller start = new Controller();
         public StartContent()
         {
             InitializeComponent();
+
+            lblWelcome.Content = "Hej " + start.LoggedInUser();
+            
+
         }
     }
 }
+
+
+//public DateTime GetLastDonationDate(string type, User user)
+//{
+//    DateTime date = Convert.ToDateTime(from x in db.Donation
+//                                       where x.UserId == user.UserId
+//                                       group x by x.DonationDate into grp
+//                                       select grp.OrderByDescending(g => g.DonationDate).FirstOrDefault().DonationDate);
+
+//    return date;
+//}
