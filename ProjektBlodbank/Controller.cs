@@ -8,5 +8,11 @@ namespace ProjektBlodbank
 {
     class Controller
     {
+        public string LoggedInUser()
+        {
+            return Data.UserData.LoggedInUser.Firstname;
+        }
+
+
     }
 }
