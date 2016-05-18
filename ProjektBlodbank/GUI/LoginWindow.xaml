@@ -19,6 +19,7 @@
                     <Button x:Name="ForgotPasswordBtn" Style="{StaticResource LoginButton}" Content="Glemt kodeord" Click="ForgotPasswordBtn_Click"/>
                 </StackPanel>
             </StackPanel>
+            <Label x:Name="TestUserLbl" Content="Brugernavn: anders, kodeord: and" VerticalAlignment="Bottom" FontSize="9"/> 
         </Grid>
         <Grid x:Name="CreateUserGrid" Visibility="Hidden">
             <StackPanel Margin="15">

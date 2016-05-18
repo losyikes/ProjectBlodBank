@@ -44,7 +44,7 @@ namespace ProjektBlodbank.GUI
             user.City = "Andeby";
             user.ZipCode = 5700;
             user.CPRNumber = 1245781245;
-            user.Login = "andersine";
+            user.Login = "anders";
             user.Password = "and";
             user.Bloodtype = "A+";
             user.Email = "andersand@andeby.dk";

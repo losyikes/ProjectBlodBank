@@ -60,7 +60,7 @@ namespace ProjektBlodbank.Business
 
         public User()
         {
-            // Ehm hov, hilsen Daniel N
+            
         }
 
         public User(string login, string password, string email, string firstName, string lastName, string city, int zipCode, string streetName, int cPRNumber, int phoneNumber, string bloodType)
@@ -76,10 +76,6 @@ namespace ProjektBlodbank.Business
             CPRNumber = cPRNumber;
             PhoneNumber = phoneNumber;
             Bloodtype = bloodType;
-
-            //Comment to self
-            //if (string.Empty)
-            //    property = null;
         }
     }
 }
