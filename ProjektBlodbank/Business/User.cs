@@ -37,7 +37,7 @@ namespace ProjektBlodbank.Business
         [Column]
         public string Email { get; set; }
         [Column]
-        public string PhoneNumber { get; set; }
+        public int PhoneNumber { get; set; }
         [Column]
         public DateTime NextPlasmaDonation { get; set; }
         [Column]
@@ -63,7 +63,7 @@ namespace ProjektBlodbank.Business
             // Ehm hov, hilsen Daniel N
         }
 
-        public User(string login, string password, string email, string firstName, string lastName, string city, int zipCode, string streetName, int cPRNumber, string phoneNumber, string bloodType)
+        public User(string login, string password, string email, string firstName, string lastName, string city, int zipCode, string streetName, int cPRNumber, int phoneNumber, string bloodType)
         {
             Login = login;
             Password = password;

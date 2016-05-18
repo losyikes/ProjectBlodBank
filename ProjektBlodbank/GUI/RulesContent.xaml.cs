@@ -36,6 +36,25 @@ namespace ProjektBlodbank.GUI
         }
         void fillDatabase()
         {
+            /*
+            User user = new User();
+            user.Firstname = "Anders";
+            user.Lastname = "And";
+            user.Streetname = "Paradisæblevej 113";
+            user.City = "Andeby";
+            user.ZipCode = 5700;
+            user.CPRNumber = 1245781245;
+            user.Login = "andersine";
+            user.Password = "and";
+            user.Bloodtype = "A+";
+            user.Email = "andersand@andeby.dk";
+            user.PhoneNumber = 12345678;
+            user.NextPlasmaDonation = DateTime.Now.AddDays(30);
+            user.NextWholeBloodDonation = DateTime.Now.AddDays(14);
+            user.PreferredBusLocation = "Fåborg";
+            db.User.InsertOnSubmit(user);
+            db.SubmitChanges();
+            */
 
             User user = new User();
             user.Firstname = "Andersine";
@@ -43,15 +62,15 @@ namespace ProjektBlodbank.GUI
             user.Streetname = "Gåsestræde 113";
             user.City = "Andeby";
             user.ZipCode = 5700;
-            user.CPRNumber = 1245781245;
+            user.CPRNumber = 1245781246;
             user.Login = "andersine";
             user.Password = "and";
             user.Bloodtype = "0+";
             user.Email = "andersineand@andeby.dk";
-            user.PhoneNumber = "12345876";
-            user.NextPlasmaDonation = DateTime.Now.AddDays(30);
-            user.NextWholeBloodDonation = DateTime.Now.AddDays(14);
-            //user.PreferredBusLocation = "Fåborg";
+            user.PhoneNumber = 12345876;
+            user.NextPlasmaDonation = DateTime.Now.AddDays(35);
+            user.NextWholeBloodDonation = DateTime.Now.AddDays(10);
+            user.PreferredBusLocation = "Fåborg";
             db.User.InsertOnSubmit(user);
             db.SubmitChanges();
 
