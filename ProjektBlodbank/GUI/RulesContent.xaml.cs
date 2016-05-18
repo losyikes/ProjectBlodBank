@@ -148,7 +148,7 @@ namespace ProjektBlodbank.GUI
             totals.TotalDuration = new TimeSpan(5, 30, 0);
             totals.TotalDonations = 4;
             totals.SavedLives = 5;
-            user.Total = totals;
+            //user.Total = totals;
             user.DonationList = donationList;
             db.Donation.InsertAllOnSubmit(donationList);
             db.Totals.InsertOnSubmit(totals);

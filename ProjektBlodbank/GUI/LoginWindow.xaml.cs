@@ -37,6 +37,7 @@ namespace ProjektBlodbank.GUI
 
         private void LoginBtn_Click(object sender, RoutedEventArgs e)
         {
+            /*
             LoginController loginController = new LoginController();
             if (LoginUserNameTbx.Text == "" && LoginPasswordTbx.Text == "")
                 MessageBox.Show("Indtast venlist et brugernavn og en adgangskode.");
@@ -48,11 +49,12 @@ namespace ProjektBlodbank.GUI
                 MessageBox.Show("Indtast venlist gyldigt brugernavn og adgangskode.");
             else
             {
+            */
                 UserData userdata = new UserData();
                 MainWindow mainWindow = new MainWindow();
                 mainWindow.Show();
                 this.Close();
-            }
+            //}
         }
 
         private void NewUserBtn_Click(object sender, RoutedEventArgs e)

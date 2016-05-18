@@ -51,12 +51,12 @@ namespace ProjektBlodbank.Business
         //[Column(Storage = "preferredBusLocation")]
         [Column]
         public string PreferredBusLocation { get; set; }
-        [Association(Name = "User_Totals", Storage = "totals", IsForeignKey = true, ThisKey = "UserId", OtherKey = "UserId")]
-        public Totals Total
-        {
-            get { return this.totals.Entity; }
-            set { this.totals.Entity = value; }
-        }
+        //[Association(Name = "User_Totals", Storage = "totals", IsForeignKey = true, ThisKey = "UserId", OtherKey = "UserId")]
+        //public Totals Total
+        //{
+        //    get { return this.totals.Entity; }
+        //    set { this.totals.Entity = value; }
+        //}
 
         public User()
         {
