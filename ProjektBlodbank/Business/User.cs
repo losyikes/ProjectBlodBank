@@ -49,8 +49,9 @@ namespace ProjektBlodbank.Business
             set { this.donationList.Assign(value); }
         }
         //[Column(Storage = "preferredBusLocation")]
-        //public string PreferredBusLocation{ get; set; }
-        //[Association(Name= "User_Totals", Storage="totals", IsForeignKey = true, ThisKey ="UserId", OtherKey = "UserId")]
+        [Column]
+        public string PreferredBusLocation { get; set; }
+        [Association(Name = "User_Totals", Storage = "totals", IsForeignKey = true, ThisKey = "UserId", OtherKey = "UserId")]
         public Totals Total
         {
             get { return this.totals.Entity; }

@@ -30,7 +30,6 @@ namespace ProjektBlodbank.GUI
             InitializeComponent();
             db = new BloodbankDataContext();
         }
-
         private void FillDbButton_Click(object sender, RoutedEventArgs e)
         {
             fillDatabase();
@@ -137,9 +136,6 @@ namespace ProjektBlodbank.GUI
 
             db.Log = Console.Out;
             db.SubmitChanges();
-
-
-
         }
     }
 }
