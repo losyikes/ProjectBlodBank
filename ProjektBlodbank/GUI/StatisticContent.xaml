@@ -9,6 +9,35 @@
              Style="{StaticResource ContentUserControl}"
              >
     <Grid x:Name="StatisticsContentGrid">
-        
+        <Grid Margin="10,10,72,124">
+            <Label x:Name="lblMemberDuration" Content="Medlemsperiode" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" Width="155"/>
+            <Label x:Name="lblTotalDonation" Content="Antal Donationer" FontWeight="Bold" HorizontalAlignment="Left" Margin="0,26,0,0" VerticalAlignment="Top" Width="155"/>
+            <Label x:Name="lblTotDonWhole" Content="Fuldblod" HorizontalAlignment="Left" Margin="33,52,0,0" VerticalAlignment="Top" Width="89"/>
+            <Label x:Name="lblTotDonPlasma" Content="Plasma" HorizontalAlignment="Left" Margin="33,78,0,0" VerticalAlignment="Top" Width="89"/>
+            <Label x:Name="lblAmountDonated" Content="Mængde blod doneret" FontWeight="Bold" HorizontalAlignment="Left" Margin="0,104,0,0" VerticalAlignment="Top" Width="155"/>
+            <Label x:Name="lblAmDonWhole" Content="Fuldblod" HorizontalAlignment="Left" Margin="33,130,0,0" VerticalAlignment="Top" Width="89"/>
+            <Label x:Name="lblAmDonPlasma" Content="Plasma" HorizontalAlignment="Left" Margin="33,156,0,0" VerticalAlignment="Top" Width="89"/>
+            <Label x:Name="lblTotalTimeDonated" Content="Samlet tid anvendt" FontWeight="Bold" HorizontalAlignment="Left" Margin="0,182,0,0" VerticalAlignment="Top" Width="155"/>
+            <Label x:Name="lblTotTimeWhole" Content="Fuldblod" HorizontalAlignment="Left" Margin="33,208,0,0" VerticalAlignment="Top" Width="89"/>
+            <Label x:Name="lblTotTimePlasma" Content="Plasma" HorizontalAlignment="Left" Margin="33,234,0,0" VerticalAlignment="Top" Width="89"/>
+            <Label x:Name="lblEmpty" Content="" HorizontalAlignment="Left" Margin="0,260,0,0" VerticalAlignment="Top" Width="155"/>
+
+
+            <Label x:Name="lblMemberDurationStat" Content="" HorizontalAlignment="Left" Margin="203,0,0,0" VerticalAlignment="Top" Width="155"/>
+            <Label x:Name="lblTotalDonationStat" Content="" HorizontalAlignment="Left" Margin="203,26,0,0" VerticalAlignment="Top" Width="155"/>
+            <Label x:Name="lblTotDonWholeStat" Content="" HorizontalAlignment="Left" Margin="203,52,0,0" VerticalAlignment="Top" Width="155"/>
+            <Label x:Name="lblTotDonPlasmaStat" Content="" HorizontalAlignment="Left" Margin="203,78,0,0" VerticalAlignment="Top" Width="155"/>
+            <Label x:Name="lblAmountDonatedStat" Content="" HorizontalAlignment="Left" Margin="203,104,0,0" VerticalAlignment="Top" Width="155"/>
+            <Label x:Name="lblAmDonWholeStat" Content="" HorizontalAlignment="Left" Margin="203,130,0,0" VerticalAlignment="Top" Width="155"/>
+            <Label x:Name="lblAmDonPlasmaStat" Content="" HorizontalAlignment="Left" Margin="203,156,0,0" VerticalAlignment="Top" Width="155"/>
+            <Label x:Name="lblTotalTimeDonatedStat" Content="" HorizontalAlignment="Left" Margin="203,182,0,0" VerticalAlignment="Top" Width="155"/>
+            <Label x:Name="lblTotTimeWholeStat" Content="" HorizontalAlignment="Left" Margin="203,208,0,0" VerticalAlignment="Top" Width="155"/>
+            <Label x:Name="lblTotTimePlasmaStat" Content="Label" HorizontalAlignment="Left" Margin="203,234,0,0" VerticalAlignment="Top" Width="155"/>
+            <Label x:Name="lblEmptyStat" Content="" HorizontalAlignment="Left" Margin="203,260,0,0" VerticalAlignment="Top" Width="155"/>
+
+
+        </Grid>
+
+
     </Grid>
 </UserControl>
