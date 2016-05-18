@@ -25,8 +25,8 @@ namespace ProjektBlodbank.GUI
         {
             InitializeComponent();
 
-            lblWelcome.Content = "Hej " + start.LoggedInUser();
-            
+            //lblWelcome.Content = "Hej " + start.LoggedInUser();
+            lblWelcome.Content = "Hej fornavn";
 
         }
     }
