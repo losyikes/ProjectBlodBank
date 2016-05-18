@@ -29,7 +29,7 @@ namespace ProjektBlodbank.GUI
         {
             InitializeComponent();
 
-            statController.
+            //statController.
 
 
 
