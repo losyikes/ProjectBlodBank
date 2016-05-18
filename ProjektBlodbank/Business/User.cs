@@ -57,5 +57,29 @@ namespace ProjektBlodbank.Business
             get { return this.totals.Entity; }
             set { this.totals.Entity = value; }
         }
+
+        public User()
+        {
+            // Ehm hov, hilsen Daniel N
+        }
+
+        public User(string login, string password, string email, string firstName, string lastName, string city, int zipCode, string streetName, int cPRNumber, string phoneNumber, string bloodType)
+        {
+            Login = login;
+            Password = password;
+            Email = email;
+            Firstname = firstName;
+            Lastname = lastName;
+            City = city;
+            ZipCode = zipCode;
+            Streetname = streetName;
+            CPRNumber = cPRNumber;
+            PhoneNumber = phoneNumber;
+            Bloodtype = bloodType;
+
+            //Comment to self
+            //if (string.Empty)
+            //    property = null;
+        }
     }
 }

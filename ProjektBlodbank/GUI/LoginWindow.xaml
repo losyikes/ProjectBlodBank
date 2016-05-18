@@ -8,7 +8,6 @@
         Title="ProjektBlodbank - Login" Height="270" Width="400">
     <Grid >
         <Grid x:Name="LoginGrid" Visibility="Visible">
-        <!--Layout/ UI må for min skyld gerne ændres, så det ser bedre ud, Daniel N-->
             <StackPanel Margin="15">
                 <Label Style="{StaticResource LoginLabel}" x:Name="UserNameLbl" Content="Brugernavn:"/>
                 <TextBox x:Name="LoginUserNameTbx"/>
@@ -17,17 +16,17 @@
                 <StackPanel Style="{StaticResource LoginStackPanel}">
                     <Button x:Name="LoginBtn" Style="{StaticResource LoginButton}" Content="Log ind" Click="LoginBtn_Click"/>
                     <Button x:Name="NewUserBtn" Style="{StaticResource LoginButton}" Content="Ny bruger"  Click="NewUserBtn_Click" />
-                        <Button x:Name="ForgotPasswordBtn" Style="{StaticResource LoginButton}" Content="Glemt kodeord" Click="ForgotPasswordBtn_Click"/>
+                    <Button x:Name="ForgotPasswordBtn" Style="{StaticResource LoginButton}" Content="Glemt kodeord" Click="ForgotPasswordBtn_Click"/>
                 </StackPanel>
             </StackPanel>
         </Grid>
         <Grid x:Name="CreateUserGrid" Visibility="Hidden">
             <StackPanel Margin="15">
-                <Label Style="{StaticResource LoginLabel}" x:Name="CreateUserUserNameLbl" Content="Brugernavn:" />
+                <Label Style="{StaticResource LoginLabel}" x:Name="CreateUserUserNameLbl" Content="*Brugernavn:" />
                 <TextBox x:Name="CreateUserUserNameTbx"/>
                 <WrapPanel>
-                    <Label Style="{StaticResource LeftLoginLabel}" x:Name="CreateUserPasswordLbl" Content="Kodeord:"/>
-                    <Label Style="{StaticResource LoginLabel}" x:Name="CreateUserRepeatPasswordLbl" Content="Gentag kodeord:"/>
+                    <Label Style="{StaticResource LeftLoginLabel}" x:Name="CreateUserPasswordLbl" Content="*Kodeord:"/>
+                    <Label Style="{StaticResource LoginLabel}" x:Name="CreateUserRepeatPasswordLbl" Content="*Gentag kodeord:"/>
                 </WrapPanel>
                 <WrapPanel>
                     <TextBox x:Name="CreateUserPasswordTbx" Width="170" Margin="0,0,15,0"/>
@@ -36,24 +35,24 @@
                 <Label Style="{StaticResource LoginLabel}" x:Name="CreateUserEmailLbl" Content="E-mail:"/>
                 <TextBox x:Name="CreateUserEmailTbx"/>
                 <WrapPanel>
-                    <Label Style="{StaticResource LeftLoginLabel}" x:Name="CreateUserFirstNameLbl" Content="Fornavn:"/>
-                    <Label Style="{StaticResource LoginLabel}" x:Name="CreateUserLastNameLbl" Content="Efternavn:"/>
+                    <Label Style="{StaticResource LeftLoginLabel}" x:Name="CreateUserFirstNameLbl" Content="*Fornavn:"/>
+                    <Label Style="{StaticResource LoginLabel}" x:Name="CreateUserLastNameLbl" Content="*Efternavn:"/>
                 </WrapPanel>
                 <WrapPanel>
                     <TextBox x:Name="CreateUserFirstNameTbx" Width="170" Margin="0,0,15,0"/>
                     <TextBox x:Name="CreateUserLastNameTbx" Width="170"/>
                 </WrapPanel>
                 <WrapPanel>
-                    <Label Style="{StaticResource LeftLoginLabel}" x:Name="CreateUserCountryLbl" Content="By:"/>
+                    <Label Style="{StaticResource LeftLoginLabel}" x:Name="CreateUserCityLbl" Content="By:"/>
                     <Label Style="{StaticResource LoginLabel}" x:Name="CreateUserZipCodeLbl" Content="Postnummer:"/>
                 </WrapPanel>
                 <WrapPanel>
-                    <TextBox x:Name="CreateUserCountryTbx" Width="170" Margin="0,0,15,0"/>
+                    <TextBox x:Name="CreateUserCityTbx" Width="170" Margin="0,0,15,0"/>
                     <TextBox x:Name="CreateUserZipCodeTbx" Width="170"/>
                 </WrapPanel>
                 <Label Style="{StaticResource LoginLabel}" x:Name="CreateUserStreetNameLbl" Content="Vejnavn:" />
                 <TextBox x:Name="CreateUserStreetNameTbx"/>
-                <Label Style="{StaticResource LoginLabel}" x:Name="CreateUserCPRNumberLbl" Content="CPR-nummer:" />
+                <Label Style="{StaticResource LoginLabel}" x:Name="CreateUserCPRNumberLbl" Content="*CPR-nummer:" />
                 <TextBox x:Name="CreateUserCPRNumberTbx"/>
                 <Label Style="{StaticResource LoginLabel}" x:Name="CreateUserPhoneNumberLbl" Content="Telefon-nr.:" />
                 <TextBox x:Name="CreateUserPhoneNumberTbx"/>
@@ -64,7 +63,4 @@
             </StackPanel>
         </Grid>
     </Grid>
-        
-    
-
 </Window>
