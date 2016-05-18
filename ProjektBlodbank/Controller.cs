@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ProjektBlodbank.Business;
+using ProjektBlodbank.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,10 +10,20 @@ namespace ProjektBlodbank
 {
     class Controller
     {
+        UserData data = new UserData();
         public string LoggedInUser()
         {
-            return Data.UserData.LoggedInUser.Firstname;
+            return UserData.LoggedInUser.Firstname;
         }
+
+        public string LoadStats()
+        {
+            List<Donation> donationList = data.GetDonations(UserData.LoggedInUser.UserId);
+            
+
+            return "";
+        }
+
 
 
     }

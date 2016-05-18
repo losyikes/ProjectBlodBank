@@ -78,6 +78,22 @@ namespace ProjektBlodbank.Data
             return (Donation)donation;
         }
 
+        public List<Donation> GetDonations(int userID)
+        {
+            List<Donation> donationList = new List<Donation>(); 
+            var donation = from x in db.Donation
+                           where x.UserId == userID
+                           select x;
+            donationList = donation.ToList();
+
+            return donationList;
+        }
+
+        //var empnamesEnum = from emp in emplist
+        //                   select emp.Ename;
+        //List<string> empnames = empnamesEnum.ToList();
+
+        
         public Totals GetTotals(int userID)
         {
             var totals = from x in db.Totals
