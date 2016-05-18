@@ -52,7 +52,7 @@
                 </WrapPanel>
                 <Label Style="{StaticResource LoginLabel}" x:Name="CreateUserStreetNameLbl" Content="Vejnavn:" />
                 <TextBox x:Name="CreateUserStreetNameTbx"/>
-                <Label Style="{StaticResource LoginLabel}" x:Name="CreateUserCPRNumberLbl" Content="*CPR-nummer:" />
+                <Label Style="{StaticResource LoginLabel}" x:Name="CreateUserCPRNumberLbl" Content="*CPR-nummer: (ddmmååxxxx)" />
                 <TextBox x:Name="CreateUserCPRNumberTbx"/>
                 <Label Style="{StaticResource LoginLabel}" x:Name="CreateUserPhoneNumberLbl" Content="Telefon-nr.:" />
                 <TextBox x:Name="CreateUserPhoneNumberTbx"/>

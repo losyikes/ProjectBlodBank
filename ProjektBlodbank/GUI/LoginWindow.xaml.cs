@@ -23,14 +23,20 @@ namespace ProjektBlodbank.GUI
     {
         private int LoginGridHeight = 270;
         private int CreateUserGridHeight = 535;
+        private List<TextBox> necesaryInputList;
         public LoginWindow()
         {
             InitializeComponent();
+            necesaryInputList = new List<TextBox>();
+            necesaryInputList.Add(CreateUserUserNameTbx);
+            necesaryInputList.Add(CreateUserPasswordTbx);
+            necesaryInputList.Add(CreateUserFirstNameTbx);
+            necesaryInputList.Add(CreateUserLastNameTbx);
+            necesaryInputList.Add(CreateUserCPRNumberTbx);
         }
 
         private void LoginBtn_Click(object sender, RoutedEventArgs e)
         {
-            /*
             LoginController loginController = new LoginController();
             if (LoginUserNameTbx.Text == "" && LoginPasswordTbx.Text == "")
                 MessageBox.Show("Indtast venlist et brugernavn og en adgangskode.");
@@ -42,12 +48,11 @@ namespace ProjektBlodbank.GUI
                 MessageBox.Show("Indtast venlist gyldigt brugernavn og adgangskode.");
             else
             {
-            */
                 UserData userdata = new UserData();
                 MainWindow mainWindow = new MainWindow();
                 mainWindow.Show();
                 this.Close();
-            //}
+            }
         }
 
         private void NewUserBtn_Click(object sender, RoutedEventArgs e)
@@ -67,12 +72,25 @@ namespace ProjektBlodbank.GUI
         {
             LoginController loginController = new LoginController();
             bool passwordValidated;
-            passwordValidated = loginController.ValidatePassword(CreateUserPasswordTbx.Text, CreateUserRepeatPasswordTbx.Text);
-            if (passwordValidated == true)
+            bool missingInput = false;
+            foreach (TextBox textBox in necesaryInputList)
             {
-                MainWindow mainWindow = new MainWindow();
-                mainWindow.Show();
-                this.Close();
+                if (textBox.Text == "")
+                    missingInput = true;
+            }
+            if (missingInput == true)
+                MessageBox.Show("Indtast venligst alle felter markeret med en *");
+            else
+            {
+                passwordValidated = loginController.ValidatePassword(CreateUserPasswordTbx.Text, CreateUserRepeatPasswordTbx.Text);
+                if (passwordValidated == false)
+                    MessageBox.Show("Indtast venligst det samme kodeord to gange.");
+                else
+                {
+                    MainWindow mainWindow = new MainWindow();
+                    mainWindow.Show();
+                    this.Close();
+                }
             }
         }
 
