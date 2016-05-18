@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ProjektBlodbank.Data;
 
 namespace ProjektBlodbank
 {
@@ -18,7 +19,12 @@ namespace ProjektBlodbank
 
         internal bool Login(string inputUsername, string inputPassword)
         {
-            return true;
+            UserData userData = new UserData();
+            User user = userData.GetUser(inputUsername);
+            if (inputPassword == user.Password)
+                return true;
+            else
+                return false;
         }
     }
 }

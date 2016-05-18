@@ -47,8 +47,8 @@ namespace ProjektBlodbank.GUI
                 MainWindow mainWindow = new MainWindow();
                 mainWindow.Show();
                 this.Close();
-            //}
-        }
+        //}
+    }
 
         private void NewUserBtn_Click(object sender, RoutedEventArgs e)
         {
