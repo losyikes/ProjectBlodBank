@@ -26,8 +26,12 @@ namespace ProjektBlodbank.GUI
         {
             InitializeComponent();
             chart.statContent = this;
-            Grid statGrid = chart.CreateGrid();
-            StatisticsContentGrid.Children.Add(statGrid);
+
+
+
+
+            //Grid statGrid = chart.CreateGrid();
+            //StatisticsContentGrid.Children.Add(statGrid);
         }
     }
 }

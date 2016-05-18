@@ -52,7 +52,7 @@ namespace ProjektBlodbank.GUI
             user.PhoneNumber = "12345876";
             user.NextPlasmaDonation = DateTime.Now.AddDays(30);
             user.NextWholeBloodDonation = DateTime.Now.AddDays(14);
-            user.PreferredBusLocation = "Fåborg";
+            //user.PreferredBusLocation = "Fåborg";
             db.User.InsertOnSubmit(user);
             db.SubmitChanges();
 

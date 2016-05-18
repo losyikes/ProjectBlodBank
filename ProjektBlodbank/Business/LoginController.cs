@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using ProjektBlodbank.Data;
+using ProjektBlodbank.Business;
 
 namespace ProjektBlodbank
 {
