@@ -22,13 +22,20 @@ namespace ProjektBlodbank
         {
             UserData userData = new UserData();
             User user = userData.GetUser(inputUsername);
-            if (inputPassword == user.Password)
+            try
             {
-                UserData.LoggedInUser = user;
-                return true;
+                if (inputPassword == user.Password)
+                {
+                    UserData.LoggedInUser = user;
+                    return true;
+                }
+                else
+                    return false;
             }
-            else
+            catch (NullReferenceException)
+            {
                 return false;
+            }
         }
     }
 }
