@@ -20,6 +20,12 @@ namespace ProjektBlodbank.Business
 
             DateTime nextDonation = lastDonation.AddMonths(1);
             TimeSpan ts = nextDonation.Subtract(DateTime.Today);
+
+            if (ts <= new TimeSpan(0, 0, 0))
+            {
+                ts = new TimeSpan(0, 0, 0);
+            }
+
             return ts;
         }
 
