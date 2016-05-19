@@ -57,6 +57,8 @@ namespace ProjektBlodbank.Business
         //    get { return this.totals.Entity; }
         //    set { this.totals.Entity = value; }
         //}
+        [Column]
+        public DateTime RegisteredDate { get; set; }
 
         public User()
         {
