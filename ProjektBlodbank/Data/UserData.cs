@@ -21,14 +21,22 @@ namespace ProjektBlodbank.Data
             db = new BloodbankDataContext();
             
         }
-        public DateTime GetLastDonationDate(string type, User user)
+        public DateTime GetLastDonationDate(/*string type, User user*/)
         {
-           DateTime date = Convert.ToDateTime(from x in db.Donation
-                       where x.UserId == user.UserId
-                       group x by x.DonationDate into grp
-                       select grp.OrderByDescending(g => g.DonationDate).FirstOrDefault().DonationDate);
-            
+            //DateTime date = Convert.ToDateTime(from x in db.Donation
+            //                                   where x.UserId == user.UserId
+            //                                   group x by x.DonationDate into grp
+            //                                   select grp.OrderByDescending(g => g.DonationDate).FirstOrDefault().DonationDate);
+            DateTime date = new DateTime(2016, 5, 15);
+
             return date;
+        }
+
+        public TimeSpan Countdown(DateTime date)
+        {
+            DateTime nextDonation = date.AddMonths(1);
+            TimeSpan ts = nextDonation.Subtract(DateTime.Today);
+            return ts;
         }
         public void AddUser(User user)
         {

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ProjektBlodbank.Business;
 
 namespace ProjektBlodbank.GUI
 {
@@ -20,15 +21,19 @@ namespace ProjektBlodbank.GUI
     /// </summary>
     public partial class StartContent : UserControl
     {
-        Controller start = new Controller();
+        Controller controller = new Controller();
+        Start start = new Start();
+
         public StartContent()
         {
             InitializeComponent();
 
-            //lblWelcome.Content = "Hej " + start.LoggedInUser();
-            lblWelcome.Content = "Hej fornavn";
+            lblWelcome.Content = "Hej " + controller.LoggedInUser();
+            lblCount.Content = start.Countdown().TotalDays;
+
 
         }
+
     }
 }
 
