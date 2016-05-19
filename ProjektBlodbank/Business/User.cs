@@ -63,20 +63,24 @@ namespace ProjektBlodbank.Business
         {
             
         }
-
-        public User(string login, string password, string email, string firstName, string lastName, string city, int zipCode, string streetName, int cPRNumber, int phoneNumber, string bloodType)
+        
+        public User(string firstName, string lastName, string streetName, string city, int zipCode,
+            int cPRNumber, string username, string password, string bloodtype, string email, int phoneNumber)
         {
-            Login = login;
-            Password = password;
-            Email = email;
             Firstname = firstName;
             Lastname = lastName;
+            Streetname = streetName;
             City = city;
             ZipCode = zipCode;
-            Streetname = streetName;
             CPRNumber = cPRNumber;
+            Login = username;
+            Password = password;
+            Bloodtype = bloodtype;
+            Email = email;
             PhoneNumber = phoneNumber;
-            Bloodtype = bloodType;
+            NextPlasmaDonation = DateTime.Now.AddDays(25); // midlertidig kode
+            NextWholeBloodDonation = DateTime.Now.AddDays(60); // midlertidig kode
+            RegisteredDate = DateTime.Now;
         }
     }
 }
