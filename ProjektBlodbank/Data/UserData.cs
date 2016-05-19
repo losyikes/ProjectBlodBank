@@ -58,9 +58,10 @@ namespace ProjektBlodbank.Data
 
         public User GetUser(string username)
         {
-            var user = from x in db.User
-                       where x.Login == username
-                       select x;
+            var user = (from x in db.User
+                        where x.Login == username
+                        select x).SingleOrDefault();
+
             return (User)user;
         }
 
