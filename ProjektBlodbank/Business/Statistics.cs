@@ -18,18 +18,27 @@ namespace ProjektBlodbank
         public int TotalDonationStat { get; set; }
         public int TotDonWholeStat { get; set; }
         public int TotDonPlasmaStat { get; set; }
-        public int AmountDonatedStat { get; set; }
-        public int AmDonWholeStat { get; set; }
-        public int AmDonPlasmaStat { get; set; }
-        public int TotalTimeDonatedStat { get; set; }
-        public int TotTimeWholeStat { get; set; }
-        public int TotTimePlasmaStat { get; set; }
+        public double AmountDonatedStat { get; set; }
+        public double AmDonWholeStat { get; set; }
+        public double AmDonPlasmaStat { get; set; }
+        public TimeSpan TotalTimeDonatedStat { get; set; }
+        public TimeSpan TotTimeWholeStat { get; set; }
+        public TimeSpan TotTimePlasmaStat { get; set; }
 
         
 
         public Statistics()
         {
-           
+            memberDurationStat = new TimeSpan(0, 0, 0);
+            TotalDonationStat = 0;
+            TotDonWholeStat = 0;
+            TotDonPlasmaStat = 0;
+            AmountDonatedStat = 0;
+            AmDonWholeStat = 0;
+            AmDonPlasmaStat = 0;
+            TotalTimeDonatedStat = new TimeSpan(0, 0, 0);
+            TotTimeWholeStat = new TimeSpan(0, 0, 0);
+            TotTimePlasmaStat = new TimeSpan(0, 0, 0);
         }
 
 

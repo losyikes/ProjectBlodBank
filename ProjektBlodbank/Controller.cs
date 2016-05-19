@@ -16,29 +16,35 @@ namespace ProjektBlodbank
             return UserData.LoggedInUser.Firstname;
         }
 
-        public string LoadStats()
+        public Statistics CreateStats()
         {
             List<Donation> donationList = data.GetDonations(UserData.LoggedInUser.UserId);
-            Statistics stat = new Statistics();
-            //    public TimeSpan memberDurationStat { get; set; }
-            //public int TotalDonationStat { get; set; }
-            //public int TotDonWholeStat { get; set; }
-            //public int TotDonPlasmaStat { get; set; }
-            //public int AmountDonatedStat { get; set; }
-            //public int AmDonWholeStat { get; set; }
-            //public int AmDonPlasmaStat { get; set; }
-            //public int TotalTimeDonatedStat { get; set; }
-            //public int TotTimeWholeStat { get; set; }
-            //public int TotTimePlasmaStat { get; set; }
+            Statistics stats = new Statistics();
 
-            stat.memberDurationStat = (DateTime.Now).Subtract(donationList[0].RegisteredDate);
+            stats.memberDurationStat = (DateTime.Now).Subtract(UserData.LoggedInUser.RegisteredDate);
 
             for (int i = 0; i < donationList.Count; i++)
             {
+                stats.TotalDonationStat++;
+                stats.AmountDonatedStat += donationList[i].Amount;
+                stats.TotalTimeDonatedStat += donationList[i].Duration;
 
+
+                if (donationList[i].DonationType == "WholeBlood")
+                {
+                    stats.TotDonWholeStat++;
+                    stats.AmDonWholeStat += donationList[i].Amount;
+                    stats.TotTimeWholeStat += donationList[i].Duration;
+                }
+                else if (donationList[i].DonationType == "Plasma")
+                {
+                    stats.TotDonPlasmaStat++;
+                    stats.AmDonPlasmaStat += donationList[i].Amount;
+                    stats.TotTimePlasmaStat += donationList[i].Duration;
+                }
             }
 
-            return "";
+            return stats;
         }
 
         

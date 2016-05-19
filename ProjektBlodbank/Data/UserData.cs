@@ -70,7 +70,6 @@ namespace ProjektBlodbank.Data
             User user = GetUser(userID);
             return user.Firstname;
         }
-
         public Donation GetDonation(int userID)
         {
             var donation = from x in db.Donation

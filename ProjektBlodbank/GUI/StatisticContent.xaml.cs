@@ -29,7 +29,18 @@ namespace ProjektBlodbank.GUI
         {
             InitializeComponent();
 
-            statController.LoadStats();
+            Statistics stats = statController.CreateStats();
+
+            lblMemberDurationStat.Content = stats.memberDurationStat.Hours.ToString() + " timer, " + stats.memberDurationStat.Minutes.ToString() + " min, " + stats.memberDurationStat.Seconds.ToString() + " sek";
+            lblTotalDonationStat.Content = stats.TotalDonationStat + " donationer";
+            lblTotDonWholeStat.Content = stats.TotDonWholeStat + " donationer";
+            lblTotDonPlasmaStat.Content = stats.TotDonPlasmaStat + " donationer";
+            lblAmountDonatedStat.Content = stats.AmountDonatedStat + " mL";
+            lblAmDonWholeStat.Content = stats.AmDonWholeStat + " mL";
+            lblAmDonPlasmaStat.Content = stats.AmDonPlasmaStat + " mL";
+            lblTotalTimeDonatedStat.Content = stats.TotalTimeDonatedStat.Hours.ToString() + " timer, " + stats.TotalTimeDonatedStat.Minutes.ToString() + " min, " + stats.TotalTimeDonatedStat.Seconds.ToString() + " sek";
+            lblTotTimeWholeStat.Content = stats.TotTimeWholeStat.Hours.ToString() + " timer, " + stats.TotTimeWholeStat.Minutes.ToString() + " min, " + stats.TotTimeWholeStat.Seconds.ToString() + " sek";
+            lblTotTimePlasmaStat.Content = stats.TotTimePlasmaStat.Hours.ToString() + " timer, " + stats.TotTimePlasmaStat.Minutes.ToString() + " min, " + stats.TotTimePlasmaStat.Seconds.ToString() + " sek";
 
 
 
