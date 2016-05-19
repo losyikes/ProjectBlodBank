@@ -32,7 +32,7 @@
             <Label x:Name="lblAmDonPlasmaStat" Content="" HorizontalAlignment="Left" Margin="203,156,0,0" VerticalAlignment="Top" Width="155"/>
             <Label x:Name="lblTotalTimeDonatedStat" Content="" HorizontalAlignment="Left" Margin="203,182,0,0" VerticalAlignment="Top" Width="155"/>
             <Label x:Name="lblTotTimeWholeStat" Content="" HorizontalAlignment="Left" Margin="203,208,0,0" VerticalAlignment="Top" Width="155"/>
-            <Label x:Name="lblTotTimePlasmaStat" Content="Label" HorizontalAlignment="Left" Margin="203,234,0,0" VerticalAlignment="Top" Width="155"/>
+            <Label x:Name="lblTotTimePlasmaStat" Content="" HorizontalAlignment="Left" Margin="203,234,0,0" VerticalAlignment="Top" Width="155"/>
             <Label x:Name="lblEmptyStat" Content="" HorizontalAlignment="Left" Margin="203,260,0,0" VerticalAlignment="Top" Width="155"/>
 
 

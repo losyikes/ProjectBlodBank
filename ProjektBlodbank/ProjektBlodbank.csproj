@@ -94,7 +94,8 @@
     </Compile>
     <Compile Include="Business\Calendar.cs" />
     <Compile Include="Business\Donation.cs" />
-    <Compile Include="Business\StatisticsChart.cs" />
+    <Compile Include="Business\Start.cs" />
+    <Compile Include="Business\Statistics.cs" />
     <Compile Include="Business\LoginController.cs" />
     <Compile Include="Business\Totals.cs" />
     <Compile Include="Business\User.cs" />
