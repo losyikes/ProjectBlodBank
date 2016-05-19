@@ -29,16 +29,10 @@ namespace ProjektBlodbank.GUI
         {
             InitializeComponent();
 
-            //statController.
+            statController.LoadStats();
 
 
 
-
-
-
-            //chart.statContent = this;
-            //Grid statGrid = chart.CreateGrid();
-            //StatisticsContentGrid.Children.Add(statGrid);
         }
     }
 }

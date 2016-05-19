@@ -12,14 +12,24 @@ using ProjektBlodbank.GUI;
 
 namespace ProjektBlodbank
 {
-    class StatisticsChart
+    class Statistics
     {
-        public StatisticContent statContent;
-       
-        public StatisticsChart()
-        {
-            
+        public TimeSpan memberDurationStat { get; set; }
+        public int TotalDonationStat { get; set; }
+        public int TotDonWholeStat { get; set; }
+        public int TotDonPlasmaStat { get; set; }
+        public int AmountDonatedStat { get; set; }
+        public int AmDonWholeStat { get; set; }
+        public int AmDonPlasmaStat { get; set; }
+        public int TotalTimeDonatedStat { get; set; }
+        public int TotTimeWholeStat { get; set; }
+        public int TotTimePlasmaStat { get; set; }
 
+        
+
+        public Statistics()
+        {
+           
         }
 
 
