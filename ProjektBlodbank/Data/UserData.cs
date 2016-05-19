@@ -43,7 +43,20 @@ namespace ProjektBlodbank.Data
             return date;
         }
 
+        public DateTime GetLastWholeDonationDate(string type, User user)
+        {
+            var valg = (from x in db.Donation
+                        where x.UserId == user.UserId
+                        where x.DonationType == "WholeBlood"
+                        orderby x.DonationDate descending
+                        select x).FirstOrDefault();
 
+            Donation valg2 = valg;
+
+            DateTime date = valg2.DonationDate;
+
+            return date;
+        }
 
 
         public TimeSpan Countdown(DateTime date)
