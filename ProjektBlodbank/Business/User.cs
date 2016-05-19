@@ -11,7 +11,6 @@ namespace ProjektBlodbank.Business
     [Table]
     class User
     {
-        
         EntitySet<Donation> donationList = new EntitySet<Donation>();
         EntityRef<Totals> totals = new EntityRef<Totals>();
         [Column(IsPrimaryKey = true, IsDbGenerated = true)]
