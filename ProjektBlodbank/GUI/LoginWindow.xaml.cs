@@ -57,10 +57,9 @@ namespace ProjektBlodbank.GUI
 
         private void NewUserBtn_Click(object sender, RoutedEventArgs e)
         {
-            this.Height = CreateUserGridHeight;
-            CreateUserGrid.Visibility = Visibility.Visible;
-            LoginGrid.Visibility = Visibility.Hidden;
-            
+                this.Height = CreateUserGridHeight;
+                CreateUserGrid.Visibility = Visibility.Visible;
+                LoginGrid.Visibility = Visibility.Hidden;
         }
 
         private void ForgotPasswordBtn_Click(object sender, RoutedEventArgs e)
@@ -87,13 +86,20 @@ namespace ProjektBlodbank.GUI
                     MessageBox.Show("Indtast venligst det samme kodeord to gange.");
                 else
                 {
-                    MainWindow mainWindow = new MainWindow();
-                    mainWindow.Show();
-                    this.Close();
+                    bool newUserCreated = loginController.CreateNewUser(CreateUserFirstNameTbx.Text, CreateUserLastNameTbx.Text, CreateUserStreetNameTbx.Text,
+                           CreateUserCityTbx.Text, CreateUserZipCodeTbx.Text, CreateUserCPRNumberTbx.Text, CreateUserUserNameTbx.Text,
+                            CreateUserPasswordTbx.Text, CreateUserBloodTypeTbx.Text, CreateUserEmailTbx.Text, CreateUserPhoneNumberTbx.Text);
+                    if (newUserCreated == false)
+                        MessageBox.Show("Indtast venligst kun tal ved postnummer, CPR-nummer og telefonnummer.");
+                    else
+                    {
+                        MainWindow mainWindow = new MainWindow();
+                        mainWindow.Show();
+                        this.Close();
+                    }
                 }
             }
         }
-
         private void BackBtn_Click(object sender, RoutedEventArgs e)
         {
             this.Height = LoginGridHeight;
