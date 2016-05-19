@@ -16,7 +16,7 @@ namespace ProjektBlodbank.Business
         public TimeSpan Countdown()
         {
             UserData userdata = new UserData();
-            DateTime lastDonation = userdata.GetLastDonationDate();
+            DateTime lastDonation = userdata.GetLastDonationDate("Plasma", UserData.LoggedInUser);
 
             DateTime nextDonation = lastDonation.AddMonths(1);
             TimeSpan ts = nextDonation.Subtract(DateTime.Today);

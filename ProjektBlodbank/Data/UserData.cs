@@ -21,16 +21,30 @@ namespace ProjektBlodbank.Data
             db = new BloodbankDataContext();
             
         }
-        public DateTime GetLastDonationDate(/*string type, User user*/)
+        public DateTime GetLastDonationDate(string type, User user)
         {
-            //DateTime date = Convert.ToDateTime(from x in db.Donation
-            //                                   where x.UserId == user.UserId
-            //                                   group x by x.DonationDate into grp
-            //                                   select grp.OrderByDescending(g => g.DonationDate).FirstOrDefault().DonationDate);
-            DateTime date = new DateTime(2016, 5, 15);
+            var valg = (from x in db.Donation
+                        where x.UserId == user.UserId
+                        orderby x.DonationDate descending
+                        select x).FirstOrDefault();
+
+
+                        //group x by x.DonationDate into grp
+                        //select grp.OrderByDescending(g => g.DonationDate)).FirstOrDefault();
+
+            Donation valg2 = valg;
+
+            DateTime date = valg2.DonationDate;
+            
+            
+            
+            //DateTime date = new DateTime(2016, 5, 15);
 
             return date;
         }
+
+
+
 
         public TimeSpan Countdown(DateTime date)
         {
@@ -69,7 +83,6 @@ namespace ProjektBlodbank.Data
             var user = (from x in db.User
                         where x.Login == username
                         select x).SingleOrDefault();
-
             return (User)user;
         }
 
