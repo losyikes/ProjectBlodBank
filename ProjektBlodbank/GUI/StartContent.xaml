@@ -17,8 +17,19 @@
             <Label x:Name="lblCount" Content="0" FontSize="20" HorizontalAlignment="Left" Margin="9,5,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lblTitle" Content="Plasmatapning" HorizontalAlignment="Left" Margin="62,0,0,0" VerticalAlignment="Top"/>
             <Label x:Name="lblNext" Content="Næste aftalte tapning:" HorizontalAlignment="Left" Margin="62,24,0,0" VerticalAlignment="Top"/>
-            <Label x:Name="lblNextDate" Content="6. maj 2006" Foreground="Green" HorizontalAlignment="Left" Margin="195,24,0,0" VerticalAlignment="Top"/>
+            <Label x:Name="lblNextDate" Content="ikke aftalt" Foreground="Yellow" HorizontalAlignment="Left" Margin="195,24,0,0" VerticalAlignment="Top"/>
+            
+            <Grid Margin="0,100,0,-100">
+
+                <Ellipse Fill="Green" HorizontalAlignment="Left" Height="50" Stroke="Black" VerticalAlignment="Top" Width="50"/>
+                <Ellipse Fill="White" HorizontalAlignment="Left" Height="30" Margin="10,10,0,0" Stroke="Black" VerticalAlignment="Top" Width="30"/>
+                <Label x:Name="lblCount1WB" Content="0" FontSize="20" HorizontalAlignment="Left" Margin="9,5,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="lblTitle1WB" Content="Fuldblodstapning" HorizontalAlignment="Left" Margin="62,0,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="lblNext1WB" Content="Næste aftalte tapning:" HorizontalAlignment="Left" Margin="62,24,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="lblNextDate1WB" Content="ikke aftalt" Foreground="Yellow" HorizontalAlignment="Left" Margin="195,24,0,0" VerticalAlignment="Top"/>
+            </Grid>
         </Grid>
 
+        
     </Grid>
 </UserControl>

@@ -30,7 +30,7 @@ namespace ProjektBlodbank.GUI
 
             lblWelcome.Content = "Hej " + controller.LoggedInUser();
             lblCount.Content = start.Countdown().Days.ToString();
-
+            lblCount1WB.Content = start.CountdownWB().Days.ToString();
 
         }
 

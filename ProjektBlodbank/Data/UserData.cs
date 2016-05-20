@@ -29,15 +29,13 @@ namespace ProjektBlodbank.Data
                         select x).FirstOrDefault();
 
 
-                        //group x by x.DonationDate into grp
-                        //select grp.OrderByDescending(g => g.DonationDate)).FirstOrDefault();
+            //group x by x.DonationDate into grp
+            //select grp.OrderByDescending(g => g.DonationDate)).FirstOrDefault();
 
             Donation valg2 = valg;
 
             DateTime date = valg2.DonationDate;
-            
-            
-            
+
             //DateTime date = new DateTime(2016, 5, 15);
 
             return date;
