@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ProjektBlodbank.Business;
+using ProjektBlodbank.Data;
+using System.ComponentModel;
 
 namespace ProjektBlodbank.GUI
 {
@@ -34,6 +36,66 @@ namespace ProjektBlodbank.GUI
 
         }
 
+        private void ComboBoxLocation_Loaded(object sender, RoutedEventArgs e)
+        {
+            List<string> data = controller.GetBusStops();
+                        
+            var comboBox = sender as ComboBox;
+
+            comboBox.ItemsSource = data;
+
+            // ... Make the first item selected.
+            if (UserData.LoggedInUser.PreferredBusLocation!=null)
+            {
+                int index = 0;
+                bool keepRunning = true;
+                while (keepRunning && index < data.Count)
+                {
+                    if (data[index] == UserData.LoggedInUser.PreferredBusLocation)
+                    {
+                        keepRunning = false;
+                    }
+                    else
+                    {
+                        index++;
+                    }   
+                }
+                comboBox.SelectedIndex = index;
+            }
+            else
+            {
+                comboBox.SelectedIndex = 0;
+            }
+            
+
+
+
+        }
+
+        private void ComboBoxLocation_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var comboBoxLocation = sender as ComboBox;
+
+            comboBoxDate.SelectedIndex = 0;
+            comboBoxDate.ItemsSource = controller.GetBusTimes();
+                        
+            //ComboBoxDate_Loaded(sender, e);
+        }
+
+        private void ComboBoxDate_Loaded(object sender, RoutedEventArgs e)
+        {
+            List<string> dataDate = controller.GetBusTimes();
+
+            var comboBoxDate = sender as ComboBox;
+
+            comboBoxDate.ItemsSource = dataDate;
+        }
+        private void ComboBoxDate_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        
     }
 }
 

@@ -55,6 +55,7 @@ namespace ProjektBlodbank
                     intCPRNumber, username, password, bloodtype, email, intPhoneNumber);
                 UserData userdata = new UserData();
                 userdata.AddUser(newUser);
+                UserData.LoggedInUser = newUser;
                 return true;
             }
         }

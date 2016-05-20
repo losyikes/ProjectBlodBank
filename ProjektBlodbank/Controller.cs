@@ -47,7 +47,24 @@ namespace ProjektBlodbank
             return stats;
         }
 
-        
+        public List<string> GetBusStops()
+        {
+            List<string> busStops = data.GetBloodBusStops();
+
+            return busStops;
+        }
+
+        public List<string> GetBusTimes()
+        {
+            List<DateTime> busTimes = data.GetBloodBusDates(UserData.LoggedInUser.PreferredBusLocation);
+            List<string> stringTimes = new List<string>();
+
+            for (int i = 0; i < busTimes.Count; i++)
+            {
+                stringTimes.Add(busTimes[i].Date.ToString("dd/MM/yyyy"));
+            }
+            return stringTimes;
+        }
 
     }
 }

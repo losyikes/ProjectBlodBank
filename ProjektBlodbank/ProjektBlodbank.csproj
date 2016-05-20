@@ -92,6 +92,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Business\BloodBus.cs" />
     <Compile Include="Business\Calendar.cs" />
     <Compile Include="Business\Donation.cs" />
     <Compile Include="Business\Start.cs" />

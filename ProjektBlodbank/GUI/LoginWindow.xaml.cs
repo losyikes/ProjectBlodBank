@@ -22,7 +22,8 @@ namespace ProjektBlodbank.GUI
     public partial class LoginWindow : Window
     {
         private int LoginGridHeight = 270;
-        private int CreateUserGridHeight = 535;
+        private int CreateUserGridHeight = 565;
+        private int CreateUserGridWidth = 410;
         private List<TextBox> necesaryInputList;
         public LoginWindow()
         {
@@ -38,13 +39,13 @@ namespace ProjektBlodbank.GUI
         private void LoginBtn_Click(object sender, RoutedEventArgs e)
         {
             LoginController loginController = new LoginController();
-            if (LoginUserNameTbx.Text == "" && LoginPasswordTbx.Text == "")
+            if (LoginUserNameTbx.Text == "" && LoginPasswordTbx.Password == "")
                 MessageBox.Show("Indtast venlist et brugernavn og en adgangskode.");
             else if (LoginUserNameTbx.Text == "")
                 MessageBox.Show("Indtast venlist et brugernavn.");
-            else if (LoginPasswordTbx.Text == "")
+            else if (LoginPasswordTbx.Password == "")
                 MessageBox.Show("Indtast venlist en adgangskode.");
-            else if (loginController.Login(LoginUserNameTbx.Text, LoginPasswordTbx.Text) == false)
+            else if (loginController.Login(LoginUserNameTbx.Text, LoginPasswordTbx.Password) == false)
                 MessageBox.Show("Indtast venlist gyldigt brugernavn og adgangskode.");
             else
             {
@@ -57,9 +58,10 @@ namespace ProjektBlodbank.GUI
 
         private void NewUserBtn_Click(object sender, RoutedEventArgs e)
         {
-                this.Height = CreateUserGridHeight;
-                CreateUserGrid.Visibility = Visibility.Visible;
-                LoginGrid.Visibility = Visibility.Hidden;
+            this.Height = CreateUserGridHeight;
+            this.Width = CreateUserGridWidth;
+            CreateUserGrid.Visibility = Visibility.Visible;
+            LoginGrid.Visibility = Visibility.Hidden;
         }
 
         private void ForgotPasswordBtn_Click(object sender, RoutedEventArgs e)

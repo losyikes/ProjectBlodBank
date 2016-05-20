@@ -33,8 +33,17 @@ namespace ProjektBlodbank.Data
             //select grp.OrderByDescending(g => g.DonationDate)).FirstOrDefault();
 
             Donation valg2 = valg;
+            DateTime date;
 
-            DateTime date = valg2.DonationDate;
+            if (valg2==null)
+            {
+                date = DateTime.Now.AddDays(-30);
+            }
+            else
+            {
+                date = valg2.DonationDate;
+            }
+            
 
             //DateTime date = new DateTime(2016, 5, 15);
 
@@ -50,8 +59,16 @@ namespace ProjektBlodbank.Data
                         select x).FirstOrDefault();
 
             Donation valg2 = valg;
+            DateTime date;
 
-            DateTime date = valg2.DonationDate;
+            if (valg2 == null)
+            {
+                date = DateTime.Now.AddDays(-30);
+            }
+            else
+            {
+                date = valg2.DonationDate;
+            }
 
             return date;
         }
@@ -121,11 +138,34 @@ namespace ProjektBlodbank.Data
             return donationList;
         }
 
+        public List<string> GetBloodBusStops()
+        {
+            List<string> busStopList = new List<string>();
+            var busStop = (from x in db.BloodBus
+                          select x.Location).Distinct();
+            busStopList = busStop.ToList();
+
+            busStopList.Sort();
+
+            return busStopList;
+        }
+        public List<DateTime> GetBloodBusDates(string location)
+        {
+            List<DateTime> dateList = new List<DateTime>();
+            var dates = from x in db.BloodBus
+                        where x.Location == location
+                        where x.Date >= DateTime.Now.Date
+                        select x.Date;
+            dateList = dates.ToList();
+
+            return dateList;
+        }
+
         //var empnamesEnum = from emp in emplist
         //                   select emp.Ename;
         //List<string> empnames = empnamesEnum.ToList();
 
-        
+
         public Totals GetTotals(int userID)
         {
             var totals = from x in db.Totals

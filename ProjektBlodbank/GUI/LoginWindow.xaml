@@ -5,21 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjektBlodbank.GUI"
         mc:Ignorable="d"
+        ResizeMode="NoResize"
         Title="ProjektBlodbank - Login" Height="270" Width="400">
     <Grid >
         <Grid x:Name="LoginGrid" Visibility="Visible">
             <StackPanel Margin="15">
                 <Label Style="{StaticResource LoginLabel}" x:Name="UserNameLbl" Content="Brugernavn:"/>
                 <TextBox x:Name="LoginUserNameTbx"/>
-                <Label Style="{StaticResource LoginLabel}" x:Name="PasswordLbl" Content="Kodeord:"/>
-                <TextBox x:Name="LoginPasswordTbx"/>
+                <Label Style="{StaticResource LoginLabel}" x:Name="PasswordLbl" Content="Kodeord:" />
+                <!--<TextBox x:Name="LoginPasswordTbx"/>-->
+                <PasswordBox x:Name="LoginPasswordTbx" PasswordChar="*" HorizontalAlignment="Left" VerticalAlignment="Top" Width="362"/>
                 <StackPanel Style="{StaticResource LoginStackPanel}">
                     <Button x:Name="LoginBtn" Style="{StaticResource LoginButton}" Content="Log ind" Click="LoginBtn_Click"/>
                     <Button x:Name="NewUserBtn" Style="{StaticResource LoginButton}" Content="Ny bruger"  Click="NewUserBtn_Click" />
                     <Button x:Name="ForgotPasswordBtn" Style="{StaticResource LoginButton}" Content="Glemt kodeord" Click="ForgotPasswordBtn_Click"/>
                 </StackPanel>
             </StackPanel>
-            <Label x:Name="TestUserLbl" Content="Brugernavn: anders, kodeord: and" VerticalAlignment="Bottom" FontSize="9"/> 
+            <Label x:Name="TestUserLbl" Content="Brugernavn: anders, kodeord: and" VerticalAlignment="Bottom" FontSize="9"/>
         </Grid>
         <Grid x:Name="CreateUserGrid" Visibility="Hidden">
             <StackPanel Margin="15">

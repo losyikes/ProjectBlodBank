@@ -18,5 +18,6 @@ namespace ProjektBlodbank.Data
         public Table<User> User;
         public Table<Donation> Donation;
         public Table<Totals> Totals;
+        public Table<BloodBus> BloodBus;
     }
 }

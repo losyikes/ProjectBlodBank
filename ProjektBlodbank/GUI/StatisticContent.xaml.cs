@@ -31,7 +31,7 @@ namespace ProjektBlodbank.GUI
 
             Statistics stats = statController.CreateStats();
 
-            lblMemberDurationStat.Content = stats.memberDurationStat.Hours.ToString() + " timer, " + stats.memberDurationStat.Minutes.ToString() + " min, " + stats.memberDurationStat.Seconds.ToString() + " sek";
+            lblMemberDurationStat.Content = stats.memberDurationStat.Days.ToString() + " dage, " + stats.memberDurationStat.Hours.ToString() + " timer, " + stats.memberDurationStat.Minutes.ToString() + " min, ";
             lblTotalDonationStat.Content = stats.TotalDonationStat + " donationer";
             lblTotDonWholeStat.Content = stats.TotDonWholeStat + " donationer";
             lblTotDonPlasmaStat.Content = stats.TotDonPlasmaStat + " donationer";
