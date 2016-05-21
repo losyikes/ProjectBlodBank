@@ -76,10 +76,12 @@ namespace ProjektBlodbank.GUI
         {
             var comboBoxLocation = sender as ComboBox;
 
-            comboBoxDate.SelectedIndex = 0;
+            UserData.LoggedInUser.PreferredBusLocation = (string)comboBoxLocation.SelectedValue;
+
             comboBoxDate.ItemsSource = controller.GetBusTimes();
-                        
-            //ComboBoxDate_Loaded(sender, e);
+            comboBoxDate.SelectedIndex = 0;
+
+            BloodBusCountdown(Convert.ToDateTime(comboBoxDate.SelectedValue));
         }
 
         private void ComboBoxDate_Loaded(object sender, RoutedEventArgs e)
@@ -92,20 +94,13 @@ namespace ProjektBlodbank.GUI
         }
         private void ComboBoxDate_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            BloodBusCountdown(Convert.ToDateTime(comboBoxDate.SelectedValue));
 
         }
 
-        
+        private void BloodBusCountdown(DateTime pickedDate)
+        {
+            lblBusCount.Content = start.CountdownBloodBus(pickedDate).Days;
+        }
     }
 }
-
-
-//public DateTime GetLastDonationDate(string type, User user)
-//{
-//    DateTime date = Convert.ToDateTime(from x in db.Donation
-//                                       where x.UserId == user.UserId
-//                                       group x by x.DonationDate into grp
-//                                       select grp.OrderByDescending(g => g.DonationDate).FirstOrDefault().DonationDate);
-
-//    return date;
-//}

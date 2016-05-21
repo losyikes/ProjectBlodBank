@@ -13,14 +13,13 @@ namespace ProjektBlodbank.Business
 {
     class Start
     {
-        TimeSpan ts;
         public TimeSpan Countdown()
         {
             UserData userdata = new UserData();
             DateTime lastDonation = userdata.GetLastDonationDate("Plasma", UserData.LoggedInUser);
 
             DateTime nextDonation = lastDonation.AddMonths(1);
-            ts = nextDonation.Subtract(DateTime.Today);
+            TimeSpan ts = nextDonation.Subtract(DateTime.Today);
 
             if (ts <= new TimeSpan(0, 0, 0))
             {
@@ -42,15 +41,20 @@ namespace ProjektBlodbank.Business
                 tsWB = new TimeSpan(0, 0, 0);
             }
 
-            if (tsWB <= ts)
+            if (Countdown() > tsWB)
             {
-                tsWB = ts;
+                tsWB = Countdown();
             }
 
             return tsWB;
         }
 
+        public TimeSpan CountdownBloodBus(DateTime pickedDate)
+        {
+            TimeSpan tsBB = pickedDate.Subtract(DateTime.Today);
 
+            return tsBB;
+        }
 
     }
 }
