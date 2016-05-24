@@ -21,9 +21,9 @@ namespace ProjektBlodbank.GUI
     /// </summary>
     public partial class LoginWindow : Window
     {
-        private int LoginGridHeight = 270;
-        private int CreateUserGridHeight = 565;
-        private int CreateUserGridWidth = 410;
+        private const int LoginGridHeight = 270;
+        private const int CreateUserGridHeight = 565;
+        private const int CreateUserGridWidth = 410;
         private List<TextBox> necesaryInputList;
         public LoginWindow()
         {

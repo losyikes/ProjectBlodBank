@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ProjektBlodbank.App" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektBlodbank.Calendar" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAABAAFAAAAAAAAAEAABAQAAAAEAAAADgAAAEA=</HashCode>
+      <FileName>Business\Calendar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektBlodbank.LoginController" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAQAIAAAAA=</HashCode>
+      <FileName>Business\LoginController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektBlodbank.Statistics" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAACAIAAAAAAAAAgAAAAAAAAABAAAgQgAAgABA=</HashCode>
+      <FileName>Business\Statistics.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektBlodbank.Controller" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAEAEAAAACAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Controller.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektBlodbank.MainWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAEAQAAAAAAAAAAAAAAAAAAAAABAAAgAAABAEAA=</HashCode>
+      <FileName>GUI\MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ProjektBlodbank.Business.BloodBus" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Business\BloodBus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektBlodbank.Business.Donation">
+    <Position X="11.25" Y="1.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAASAAAAAAAAAAiAAAAAAAAABAQAAAQAAAA=</HashCode>
+      <FileName>Business\Donation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektBlodbank.Business.Start" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAQAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Business\Start.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektBlodbank.Business.Totals" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAACAIgAAAAAAAAAAAgAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <FileName>Business\Totals.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektBlodbank.Business.User" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAEAAAKAAACAIAAAgQAgAEAAAAAALAEAQAAAAAAA=</HashCode>
+      <FileName>Business\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektBlodbank.Data.BloodbankDataContext" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAgAAAAAAAAAAQAAAAAAAAAAACAA=</HashCode>
+      <FileName>Data\BloodbankDataContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektBlodbank.Data.UserData" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAABAAAAgAQAAAAAgEQAAAAAAgAAAwoEAAAAAAABAA=</HashCode>
+      <FileName>Data\UserData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektBlodbank.GUI.CalendarContent" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GUI\CalendarContent.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ProjektBlodbank.GUI.LoginWindow" BaseTypeListCollapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACgIAAAAAAAAAAQAAAAAAAAAAgCAAAAAAAAAICE=</HashCode>
+      <FileName>GUI\LoginWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ProjektBlodbank.GUI.RulesContent" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAQAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GUI\RulesContent.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ProjektBlodbank.GUI.SocialContent" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GUI\SocialContent.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ProjektBlodbank.GUI.StartContent" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAEAAAAAAAAFgAAAAAAAIAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GUI\StartContent.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ProjektBlodbank.GUI.StatisticContent" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>GUI\StatisticContent.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="ProjektBlodbank.Properties.Resources" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABECAAAQAAAAAAAAAwAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ProjektBlodbank.Properties.Settings" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAAIAAAAAABAAAAAAAAAAAAAgA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
