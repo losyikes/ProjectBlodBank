@@ -17,19 +17,6 @@ namespace ProjektBlodbank
     class Calendar
     {
         int month;
-        int year = 2016;
-        public CalendarContent Main;
-        private delegate void UpdateGrid();
-        public Calendar(double height, double width)
-        {
-            Height = height;
-            Width = width;
-            DateTime currentTime = DateTime.Today;
-            month = currentTime.Month;
-
-        }
-        public double Height { get; set; }
-        public double Width { get; set; }
         public int Month
         {
             get
@@ -52,9 +39,9 @@ namespace ProjektBlodbank
                 {
                     month = value;
                 }
-
             }
         }
+        int year = 2016;
         public int Year
         {
             get
@@ -66,6 +53,19 @@ namespace ProjektBlodbank
                 year = value;
             }
         }
+        public CalendarContent Main;
+        private delegate void UpdateGrid();
+        public double Height { get; set; }
+        public double Width { get; set; }
+
+        public Calendar(double height, double width)
+        {
+            Height = height;
+            Width = width;
+            DateTime currentTime = DateTime.Today;
+            month = currentTime.Month;
+        }
+
         public Grid createGrid()
         {
             Grid calendarGrid = new Grid();
@@ -77,9 +77,9 @@ namespace ProjektBlodbank
             fillCalendarHeader(Month, calendarGrid);
             return calendarGrid;
         }
+
         public void ChangeMonth(string direction)
         {
-
             if (direction == "Next")
             {
                 Month++;
@@ -96,7 +96,6 @@ namespace ProjektBlodbank
                 Main.Dispatcher.Invoke(clearGrid, DispatcherPriority.Render);
                 Main.Dispatcher.Invoke(updateGrid, DispatcherPriority.Render);
             }
-
         }
 
         void fillCalendarDays(Grid grid)
@@ -142,11 +141,11 @@ namespace ProjektBlodbank
                         weekday.Content = "";
                     }
                     grid.Children.Add(weekday);
-
                 }
                 labelRow++;
             }
         }
+
         void fillCalendarHeader(int monthNumber, Grid grid)
         {
             Button prevMonthBtn = new Button();
@@ -173,29 +172,20 @@ namespace ProjektBlodbank
             monthName.HorizontalAlignment = HorizontalAlignment.Center;
             monthName.Margin = new Thickness(0, 10, 0, 0);
 
-            //Uri uriBack = new Uri("pack://application:,,,/Resources/backArrow.png");
-            //Uri uriForward = new Uri("pack://application:,,,/Resources/forwardArrow.png");
-            //BitmapImage forwardBmp = new BitmapImage(uriForward);
-            //BitmapImage backBmp = new BitmapImage(uriBack);
-            //prevMonthBtn.Background = new ImageBrush(backBmp);
-            //nextMonthBtn.Background = new ImageBrush(forwardBmp);
-
-
             monthName.Content = new DateTime(2010, monthNumber, 1).ToString("MMMM", new CultureInfo("da-DK")).ToUpper();
             grid.Children.Add(prevMonthBtn);
             grid.Children.Add(nextMonthBtn);
             grid.Children.Add(monthName);
         }
+
         void prevMonthBtnClick(object sender, EventArgs e)
         {
             ChangeMonth("Previous");
         }
+
         void nextMonthBtnClick(object sender, EventArgs e)
         {
             ChangeMonth("Next");
         }
-
-
-
     }
 }
