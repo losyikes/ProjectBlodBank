@@ -10,12 +10,12 @@ using ProjektBlodbank.Business;
 
 namespace ProjektBlodbank.Data
 {
-    class UserData
+    class DataHandler
     {
         private BloodbankDataContext db;
 
         public static User LoggedInUser { get; set; }
-        public UserData()
+        public DataHandler()
         {
             //db = new DataContext("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Database.mdf;Integrated Security=True");
             db = new BloodbankDataContext();

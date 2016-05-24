@@ -15,8 +15,8 @@ namespace ProjektBlodbank.Business
     {
         public TimeSpan Countdown()
         {
-            UserData userdata = new UserData();
-            DateTime lastDonation = userdata.GetLastDonationDate("Plasma", UserData.LoggedInUser);
+            DataHandler dataHandler = new DataHandler();
+            DateTime lastDonation = dataHandler.GetLastDonationDate("Plasma", DataHandler.LoggedInUser);
 
             DateTime nextDonation = lastDonation.AddMonths(1);
             TimeSpan ts = nextDonation.Subtract(DateTime.Today);
@@ -30,8 +30,8 @@ namespace ProjektBlodbank.Business
         }
         public TimeSpan CountdownWB()
         {
-            UserData userdata = new UserData();
-            DateTime lastDonation = userdata.GetLastWholeDonationDate("WB", UserData.LoggedInUser);
+            DataHandler dataHandler = new DataHandler();
+            DateTime lastDonation = dataHandler.GetLastWholeDonationDate("WB", DataHandler.LoggedInUser);
 
             DateTime nextDonation = lastDonation.AddMonths(3);
             TimeSpan tsWB = nextDonation.Subtract(DateTime.Today);

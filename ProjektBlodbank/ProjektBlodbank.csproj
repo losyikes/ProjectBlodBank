@@ -102,7 +102,7 @@
     <Compile Include="Business\User.cs" />
     <Compile Include="Controller.cs" />
     <Compile Include="Data\BloodbankDataContext.cs" />
-    <Compile Include="Data\UserData.cs" />
+    <Compile Include="Data\DataHandler.cs" />
     <Compile Include="GUI\CalendarContent.xaml.cs">
       <DependentUpon>CalendarContent.xaml</DependentUpon>
     </Compile>

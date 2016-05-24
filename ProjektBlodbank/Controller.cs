@@ -10,18 +10,18 @@ namespace ProjektBlodbank
 {
     class Controller
     {
-        UserData data = new UserData();
+        DataHandler data = new DataHandler();
         public string LoggedInUser()
         {
-            return UserData.LoggedInUser.Firstname;
+            return DataHandler.LoggedInUser.Firstname;
         }
 
         public Statistics CreateStats()
         {
-            List<Donation> donationList = data.GetDonations(UserData.LoggedInUser.UserId);
+            List<Donation> donationList = data.GetDonations(DataHandler.LoggedInUser.UserId);
             Statistics stats = new Statistics();
 
-            stats.memberDurationStat = (DateTime.Now).Subtract(UserData.LoggedInUser.RegisteredDate);
+            stats.memberDurationStat = (DateTime.Now).Subtract(DataHandler.LoggedInUser.RegisteredDate);
 
             for (int i = 0; i < donationList.Count; i++)
             {
@@ -56,7 +56,7 @@ namespace ProjektBlodbank
 
         public List<string> GetBusTimes()
         {
-            List<DateTime> busTimes = data.GetBloodBusDates(UserData.LoggedInUser.PreferredBusLocation);
+            List<DateTime> busTimes = data.GetBloodBusDates(DataHandler.LoggedInUser.PreferredBusLocation);
             List<string> stringTimes = new List<string>();
 
             for (int i = 0; i < busTimes.Count; i++)

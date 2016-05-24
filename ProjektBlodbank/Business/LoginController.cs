@@ -20,13 +20,13 @@ namespace ProjektBlodbank
 
         internal bool Login(string inputUsername, string inputPassword)
         {
-            UserData userData = new UserData();
+            DataHandler userData = new DataHandler();
             User user = userData.GetUser(inputUsername);
             try
             {
                 if (inputPassword == user.Password)
                 {
-                    UserData.LoggedInUser = user;
+                    DataHandler.LoggedInUser = user;
                     return true;
                 }
                 else
@@ -53,9 +53,9 @@ namespace ProjektBlodbank
             {
                 User newUser = new User(firstName, lastName, streetName, city, intZipCode,
                     intCPRNumber, username, password, bloodtype, email, intPhoneNumber);
-                UserData userdata = new UserData();
-                userdata.AddUser(newUser);
-                UserData.LoggedInUser = newUser;
+                DataHandler dataHandler = new DataHandler();
+                dataHandler.AddUser(newUser);
+                DataHandler.LoggedInUser = newUser;
                 return true;
             }
         }

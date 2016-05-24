@@ -49,7 +49,6 @@ namespace ProjektBlodbank.GUI
                 MessageBox.Show("Indtast venlist gyldigt brugernavn og adgangskode.");
             else
             {
-                UserData userdata = new UserData();
                 MainWindow mainWindow = new MainWindow();
                 mainWindow.Show();
                 this.Close();

@@ -45,13 +45,13 @@ namespace ProjektBlodbank.GUI
             comboBox.ItemsSource = data;
 
             // ... Make the first item selected.
-            if (UserData.LoggedInUser.PreferredBusLocation!=null)
+            if (DataHandler.LoggedInUser.PreferredBusLocation!=null)
             {
                 int index = 0;
                 bool keepRunning = true;
                 while (keepRunning && index < data.Count)
                 {
-                    if (data[index] == UserData.LoggedInUser.PreferredBusLocation)
+                    if (data[index] == DataHandler.LoggedInUser.PreferredBusLocation)
                     {
                         keepRunning = false;
                     }
@@ -76,7 +76,7 @@ namespace ProjektBlodbank.GUI
         {
             var comboBoxLocation = sender as ComboBox;
 
-            UserData.LoggedInUser.PreferredBusLocation = (string)comboBoxLocation.SelectedValue;
+            DataHandler.LoggedInUser.PreferredBusLocation = (string)comboBoxLocation.SelectedValue;
 
             comboBoxDate.ItemsSource = controller.GetBusTimes();
             comboBoxDate.SelectedIndex = 0;
