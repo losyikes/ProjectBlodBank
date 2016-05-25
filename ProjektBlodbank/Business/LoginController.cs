@@ -20,8 +20,8 @@ namespace ProjektBlodbank
 
         internal bool Login(string inputUsername, string inputPassword)
         {
-            DataHandler userData = new DataHandler();
-            User user = userData.GetUser(inputUsername);
+            DataHandler dataHandler = new DataHandler();
+            User user = dataHandler.GetUser(inputUsername);
             try
             {
                 if (inputPassword == user.Password)
