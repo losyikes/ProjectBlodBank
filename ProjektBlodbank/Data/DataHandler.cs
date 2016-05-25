@@ -17,9 +17,7 @@ namespace ProjektBlodbank.Data
         public static User LoggedInUser { get; set; }
         public DataHandler()
         {
-            //db = new DataContext("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\Database.mdf;Integrated Security=True");
             db = new BloodbankDataContext();
-            
         }
         public DateTime GetLastDonationDate(string type, User user)
         {
@@ -27,10 +25,6 @@ namespace ProjektBlodbank.Data
                         where x.UserId == user.UserId
                         orderby x.DonationDate descending
                         select x).FirstOrDefault();
-
-
-            //group x by x.DonationDate into grp
-            //select grp.OrderByDescending(g => g.DonationDate)).FirstOrDefault();
 
             Donation valg2 = valg;
             DateTime date;
@@ -43,9 +37,6 @@ namespace ProjektBlodbank.Data
             {
                 date = valg2.DonationDate;
             }
-            
-
-            //DateTime date = new DateTime(2016, 5, 15);
 
             return date;
         }
@@ -73,13 +64,6 @@ namespace ProjektBlodbank.Data
             return date;
         }
 
-
-        public TimeSpan Countdown(DateTime date)
-        {
-            DateTime nextDonation = date.AddMonths(1);
-            TimeSpan ts = nextDonation.Subtract(DateTime.Today);
-            return ts;
-        }
         public void AddUser(User user)
         {
             db.User.InsertOnSubmit(user);
@@ -92,39 +76,12 @@ namespace ProjektBlodbank.Data
             db.SubmitChanges();
         }
 
-        public void AddTotals(Totals totals)
-        {
-            db.Totals.InsertOnSubmit(totals);
-            db.SubmitChanges();
-        }
-
-        public User GetUser(int userID)
-        {
-            var user = from x in db.User
-                       where x.UserId == userID
-                       select x;
-            return (User)user;
-        }
-
         public User GetUser(string username)
         {
             var user = (from x in db.User
                         where x.Login == username
                         select x).SingleOrDefault();
-            return (User)user;
-        }
-
-        public string GetFirstName(int userID)
-        {
-            User user = GetUser(userID);
-            return user.Firstname;
-        }
-        public Donation GetDonation(int userID)
-        {
-            var donation = from x in db.Donation
-                           where x.UserId == userID
-                           select x;
-            return (Donation)donation;
+            return user;
         }
 
         public List<Donation> GetDonations(int userID)
@@ -149,6 +106,7 @@ namespace ProjektBlodbank.Data
 
             return busStopList;
         }
+
         public List<DateTime> GetBloodBusDates(string location)
         {
             List<DateTime> dateList = new List<DateTime>();
@@ -161,11 +119,6 @@ namespace ProjektBlodbank.Data
             return dateList;
         }
 
-        //var empnamesEnum = from emp in emplist
-        //                   select emp.Ename;
-        //List<string> empnames = empnamesEnum.ToList();
-
-
         public Totals GetTotals(int userID)
         {
             var totals = from x in db.Totals
@@ -173,7 +126,5 @@ namespace ProjektBlodbank.Data
                          select x;
             return (Totals)totals;
         }
-
     }
-    
 }
