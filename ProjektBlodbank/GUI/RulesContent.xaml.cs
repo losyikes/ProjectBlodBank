@@ -23,12 +23,9 @@ namespace ProjektBlodbank.GUI
     /// </summary>
     public partial class RulesContent : UserControl
     {
-        //temp
-        private BloodbankDataContext db;
         public RulesContent()
         {
             InitializeComponent();
-            db = new BloodbankDataContext();
         }
     }
 }
