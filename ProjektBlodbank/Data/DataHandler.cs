@@ -21,21 +21,20 @@ namespace ProjektBlodbank.Data
         }
         public DateTime GetLastDonationDate(string type, User user)
         {
-            var valg = (from x in db.Donation
+            var donation = (from x in db.Donation
                         where x.UserId == user.UserId
                         orderby x.DonationDate descending
                         select x).FirstOrDefault();
 
-            Donation valg2 = valg;
             DateTime date;
 
-            if (valg2==null)
+            if (donation == null)
             {
                 date = DateTime.Now.AddDays(-30);
             }
             else
             {
-                date = valg2.DonationDate;
+                date = donation.DonationDate;
             }
 
             return date;
@@ -43,22 +42,21 @@ namespace ProjektBlodbank.Data
 
         public DateTime GetLastWholeDonationDate(string type, User user)
         {
-            var valg = (from x in db.Donation
+            var donation = (from x in db.Donation
                         where x.UserId == user.UserId
                         where x.DonationType == "WholeBlood"
                         orderby x.DonationDate descending
                         select x).FirstOrDefault();
 
-            Donation valg2 = valg;
             DateTime date;
 
-            if (valg2 == null)
+            if (donation == null)
             {
                 date = DateTime.Now.AddDays(-30);
             }
             else
             {
-                date = valg2.DonationDate;
+                date = donation.DonationDate;
             }
 
             return date;
